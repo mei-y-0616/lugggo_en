@@ -1,0 +1,193 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.headerPc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 0 0;
+    gap: 15px;
+}
+
+.headerSp {
+    display: none;
+}
+
+.logo {
+    width: 50px;
+    line-height: 1px;
+}
+.logo a{
+    display: inline-block;
+}
+
+.drawerSp{
+    display: none;
+}
+
+
+
+.nav {
+    background-color: var(--white);
+    padding: 12px 32px;
+    border-radius: 10px;
+}
+
+
+.navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: min(48px,3.75vw);
+}
+
+.nav ul li a {
+    display: block;
+    position: relative;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    transition: all 0.1s;
+}
+
+/* .nav ul li a:not(.navListContact)::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--font);
+    border-radius: 2px;
+    scale: 0;
+    transform-origin: center left;
+    transition: scale 0.2s;
+} */
+
+.nav ul li a:hover {
+    color:var(--accent1);
+}
+
+
+.navListContact {
+    padding: 8px 15px;
+    background-color: var(--font);
+    color: var(--background);
+    border-radius: 6px;
+    transition: all 0.1s;
+    font-weight: 500 !important;
+}
+
+.navListContact:hover {
+    outline: 1px solid var(--accent1);
+    background-color: var(--white);
+    color: var(--font);
+}
+
+
+
+@media screen and (max-width:768px) {
+    .headerPc {
+        display: none;
+    }
+
+    .headerSp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 8px;
+    }
+
+    .hbButtonWrapper {
+        padding: 10px;
+        background-color: var(--white);
+        display: inline-block;
+        border-radius: 8px;
+    }
+
+    .hbButton {
+        background-color: var(--font);
+        height: 33px;
+        width: 33px;
+        border-radius: 5px;
+        border: none;
+        position: relative;
+        display: block;
+        z-index: 100;
+    }
+
+    .hbButton::before,
+    .hbButton::after {
+        position: absolute;
+        content: "";
+        background-color: var(--white);
+        height: 2px;
+        width: 15px;
+        left: 50%;
+        transform-origin: center;
+        transition: all 0.2s;
+    }
+
+    .hbButton::before {
+        top: 11px;
+        translate: -50% 0;
+    }
+
+    .hbButton::after {
+        bottom: 11px;
+        translate: -50% 0;
+    }
+
+    .header.isActive .hbButton::before {
+        rotate: 45deg;
+        top: 50%;
+        translate: -50% -50%;
+    }
+
+    .header.isActive .hbButton::after {
+        rotate: -45deg;
+        top: 50%;
+        translate: -50% -50%;
+    }
+
+    .drawerSp {
+        display: block;
+        position: absolute;
+        translate: 100vw 0;
+        transition: all 0.3s;
+        width: fit-content;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: var(--white);
+
+        padding: 80px 0 10px;
+        border-radius: 15px 0 0 15px;
+        min-width: 60%;
+        box-sizing: border-box;
+        border:2px solid var(--light-main);
+        border-right: none;
+    }
+
+    .header.isActive .drawerSp {
+        translate: 0 0;
+    }
+
+    .drawerListSp {
+        font-weight: bold;
+        font-size: 1.125rem;
+        border-top: 1px solid #dfdfdf;
+    }
+    .drawerListSp li a{
+        display: block;
+        padding: 15px 20px;
+    }
+    .drawerListSp li{
+        border-bottom: 1px solid #dfdfdf;
+    }
+    .drawerListSp li:not(:last-child){
+        /* margin-bottom: 10px; */
+    }
+}
