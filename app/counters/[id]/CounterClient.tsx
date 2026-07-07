@@ -50,14 +50,14 @@ export default function CounterClient({
             <span style={{ color: "var(--font)" }}>を探す - 詳細</span>
           </span>
         }
-        pageName={c.counter_name_ja}
+        pageName={c.counter_name_en}
       ></PageTitle>
       <div className="container">
         <section>
           <div className={`inner ${styles.counterWrapper}`}>
             <div className={styles.counter}>
               <div className={styles.counterHead}>
-                <h2 className={styles.counterName}>{c.counter_name_ja}</h2>
+                <h2 className={styles.counterName}>{c.counter_name_en}</h2>
                 <TagList counter={c} />
               </div>
 
@@ -66,7 +66,7 @@ export default function CounterClient({
                   <div className={styles.counterDetailLeft}>
                     <DetailItem
                       imageSrc="/images/icon_map_gray.svg"
-                      explain={<p>{c.x_full_address_ja}</p>}
+                      explain={<p>{c.x_full_address_en}</p>}
                     />
                     <DetailItem
                       imageSrc="/images/icon_phone_gray.svg"
@@ -82,11 +82,11 @@ export default function CounterClient({
                       imageSrc="/images/icon_lang_gray.svg"
                       explain={<p>対応言語：{getLanguage(counter)}</p>}
                     />
-                    {c.station_name_ja && (
+                    {c.station_name_en && (
                       <DetailItem
                         imageSrc="/images/icon_station_gray.svg"
                         explain={
-                          <p>設置・最寄り公共交通機関：{c.station_name_ja}</p>
+                          <p>設置・最寄り公共交通機関：{c.station_name_en}</p>
                         }
                       />
                     )}
@@ -175,9 +175,9 @@ export default function CounterClient({
                                   )}
                                 </div>
                               )}
-                              {c.storage_notes_ja && (
+                              {c.storage_notes_en && (
                                 <p className={styles.serviceNote}>
-                                  {c.storage_notes_ja}
+                                  {c.storage_notes_en}
                                 </p>
                               )}
                             </td>
@@ -195,9 +195,9 @@ export default function CounterClient({
                                   )}
                                 </div>
                               )}
-                              {c.storage_insurance_notes_ja && (
+                              {c.storage_insurance_notes_en && (
                                 <p className={styles.serviceNote}>
-                                  {c.storage_insurance_notes_ja}
+                                  {c.storage_insurance_notes_en}
                                 </p>
                               )}
                             </td>
@@ -262,9 +262,9 @@ export default function CounterClient({
                                   )}
                                 </div>
                               )}
-                              {c.delivery_sameday_notes_ja && (
+                              {c.delivery_sameday_notes_en && (
                                 <p className={styles.serviceNote}>
-                                  {c.delivery_sameday_notes_ja}
+                                  {c.delivery_sameday_notes_en}
                                 </p>
                               )}
                             </td>
@@ -283,9 +283,9 @@ export default function CounterClient({
                                   )}
                                 </div>
                               )}
-                              {c.delivery_sameday_insurance_notes_ja && (
+                              {c.delivery_sameday_insurance_notes_en && (
                                 <p className={styles.serviceNote}>
-                                  {c.delivery_sameday_insurance_notes_ja}
+                                  {c.delivery_sameday_insurance_notes_en}
                                 </p>
                               )}
                             </td>
@@ -315,12 +315,12 @@ export default function CounterClient({
                             </tr>
                           )}
 
-                          {c.delivery_sameday_dest_ja && (
+                          {c.delivery_sameday_dest_en && (
                             <tr>
                               <th>配送先</th>
                               <td>
                                 <div className={styles.serviceDetail}>
-                                  <p>{c.delivery_sameday_dest_ja}</p>
+                                  <p>{c.delivery_sameday_dest_en}</p>
                                 </div>
                               </td>
                             </tr>
@@ -385,9 +385,9 @@ export default function CounterClient({
                                   )}
                                 </div>
                               )}
-                              {c.delivery_standard_notes_ja && (
+                              {c.delivery_standard_notes_en && (
                                 <p className={styles.serviceNote}>
-                                  {c.delivery_standard_notes_ja}
+                                  {c.delivery_standard_notes_en}
                                 </p>
                               )}
                             </td>
@@ -406,9 +406,9 @@ export default function CounterClient({
                                   )}
                                 </div>
                               )}
-                              {c.delivery_standard_insurance_notes_ja && (
+                              {c.delivery_standard_insurance_notes_en && (
                                 <p className={styles.serviceNote}>
-                                  {c.delivery_standard_insurance_notes_ja}
+                                  {c.delivery_standard_insurance_notes_en}
                                 </p>
                               )}
                             </td>
@@ -423,16 +423,16 @@ export default function CounterClient({
                                     <div className={styles.serviceDetail}>
                                       <p>全国各地発送可能</p>
                                     </div>
-                                    {c.delivery_standard_dest_ja && (
+                                    {c.delivery_standard_dest_en && (
                                       <p className={styles.serviceNote}>
-                                        {c.delivery_standard_dest_ja}
+                                        {c.delivery_standard_dest_en}
                                       </p>
                                     )}
                                   </>
                                 )}
                                 {c.delivery_standard_is_nationwide === "2" && (
                                   <div className={styles.serviceDetail}>
-                                    <p>{c.delivery_standard_dest_ja}</p>
+                                    <p>{c.delivery_standard_dest_en}</p>
                                   </div>
                                 )}
                               </td>
@@ -493,9 +493,9 @@ export default function CounterClient({
                                   </p>
                                 )}
                               </div>
-                              {c.delivery_overseas_notes_ja && (
+                              {c.delivery_overseas_notes_en && (
                                 <p className={styles.serviceNote}>
-                                  {c.delivery_overseas_notes_ja}
+                                  {c.delivery_overseas_notes_en}
                                 </p>
                               )}
                             </td>
@@ -512,9 +512,9 @@ export default function CounterClient({
                                   </p>
                                 )}
                               </div>
-                              {c.delivery_overseas_insurance_notes_ja && (
+                              {c.delivery_overseas_insurance_notes_en && (
                                 <p className={styles.serviceNote}>
-                                  {c.delivery_overseas_insurance_notes_ja}
+                                  {c.delivery_overseas_insurance_notes_en}
                                 </p>
                               )}
                             </td>

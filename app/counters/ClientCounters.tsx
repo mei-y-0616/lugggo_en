@@ -526,7 +526,7 @@ export default function ClientCounters() {
                           <div className={styles.counterHead}>
                             <div className={styles.counterHeadLeft}>
                               <h3 className={styles.counterName}>
-                                {counter.counter_name_ja}
+                                {counter.counter_name_en}
                               </h3>
                               <TagList counter={counter} />
                             </div>
@@ -556,7 +556,7 @@ export default function ClientCounters() {
                           <div className={styles.counterBottom}>
                             <DetailItem
                               imageSrc="/images/icon_map_gray.svg"
-                              explain={<p>{counter.x_full_address_ja}</p>}
+                              explain={<p>{counter.x_full_address_en}</p>}
                             />
 
                             <DetailItem

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Prop) {
       };
     } else {
       return {
-        title: counter.counter_name_ja ?? "カウンター詳細",
+        title: counter.counter_name_en ?? "カウンター詳細",
       };
     }
   } else {

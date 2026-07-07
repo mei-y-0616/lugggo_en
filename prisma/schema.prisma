@@ -134,4 +134,5 @@ model counter {
   delivery_overseas_insurance_notes_ja String? @map("配送_海外配送_補償内容_その他（日本語）")
   delivery_overseas_insurance_notes_en String? @map("配送_海外配送_補償内容_その他（英語）")
   x_full_address_ja String @map("カスタム_カウンター住所_フル") @default("")
+  x_full_address_en String @map("カスタム_カウンター住所_フル_（英語）") @default("")
 }

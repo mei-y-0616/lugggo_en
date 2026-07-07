@@ -84,7 +84,7 @@ export default function RunTime({ c }: { c: counter }) {
             })}
           </dd>
         </div>
-        <div className={`note`}>{c.hours_notes_ja}</div>
+        <div className={`note`}>{c.hours_notes_en}</div>
       </div>
     </dl>
   );

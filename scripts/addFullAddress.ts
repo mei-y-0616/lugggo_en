@@ -1,3 +1,4 @@
+import "dotenv/config";
 import prisma from "@/lib/prisma";
 import { getPrefName } from "@/utils/counter/counterFuns";
 
@@ -17,4 +18,23 @@ async function addFullAddress() {
     update();
   });
 }
-addFullAddress();
+// addFullAddress();
+
+async function addFullAddressEn() {
+  const countersId = await prisma.counter.findMany();
+
+  countersId.forEach((c) => {
+    const fullAddress =
+      c.address_en +", "+ getPrefName(String(c.pref_code) + String(c.city_code));
+
+    async function update() {
+      const upDateCounter = await prisma.counter.update({
+        where: { id: c.id },
+        data: { x_full_address_en: fullAddress },
+      });
+    }
+    update();
+  });
+}
+addFullAddressEn();
+// console.log(process.env.DATABASE_URL)

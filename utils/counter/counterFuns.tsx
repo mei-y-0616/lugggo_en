@@ -76,8 +76,8 @@ export function getLanguage(c: counter) {
     language.push("タイ語");
   }
   const languageStr = language.join("/");
-  if (c.lang_others_ja) {
-    languageStr + c.lang_others_ja;
+  if (c.lang_others_en) {
+    languageStr + c.lang_others_en;
   }
   if (languageStr.length > 0) {
     return languageStr;

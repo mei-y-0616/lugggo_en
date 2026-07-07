@@ -156,7 +156,7 @@ export default function ClientAiPlanner() {
                           <li key={i}>
                             <div className={styles.counterHead}>
                               <h4 className={styles.counterName}>
-                                {c.counter_name_ja}
+                                {c.counter_name_en}
                               </h4>
                               <div className={styles.counterTagList}>
                                 <TagList counter={c} />
@@ -165,7 +165,7 @@ export default function ClientAiPlanner() {
                             <div className={styles.counterBottom}>
                               <DetailItem
                                 imageSrc="/images/icon_map_gray.svg"
-                                explain={<p>{c.x_full_address_ja}</p>}
+                                explain={<p>{c.x_full_address_en}</p>}
                               />
                               <LinkButton
                                 path={`/counters/${c.id}`}
