@@ -92,26 +92,28 @@ export default function ClientAiPlanner() {
       <div className="container">
         <section className={isThinking ? styles.isThinking : ""}>
           <div className={styles.intro}>
-            <h3> AI手ぶら観光プランナーとは？</h3>
+            <h3>What is AI Hands-Free Travel Planner?</h3>
             <p>
-              あなたの旅行のスケジュール（いつ、どこに行くか）を入力すると、AIが最適な手ぶら観光カウンターの利用計画を提案してくれます。
+              Enter your travel schedule, including when and where you will be
+              going, and the AI will suggest the most suitable plan for using
+              hands-free travel counters.
             </p>
           </div>
           <span className={styles.formDeco}>Let's!</span>
           <form onSubmit={handleSubmit} className={styles.formArea} id="form">
             <label className={styles.promptLabel} htmlFor="prompt">
-              ここにあなたの旅行のスケジュールを入力
+              Enter your travel schedule here
             </label>
             <textarea
               id="prompt"
               name="prompt"
               onChange={(e) => setPrompt(e.target.value)}
               className={styles.promptInput}
-              placeholder={`○/○ 9時に△△空港に到着\n 観光後、15時に××ホテルにチェックイン\n ...のような感じで自由に記述してください！`}
+              placeholder={`Please describe your schedule freely, such as:\n“Arrive at △△ Airport at 9:00 on ○/○. After sightseeing, check in to ×× Hotel at 3:00 PM.”`}
             ></textarea>
             <button type="submit" className={styles.submitButton}>
-              <p className={styles.submitText}>AIプランナーに送信</p>
-              <p className={styles.loadingText}>AIが考え中…</p>
+              <p className={styles.submitText}>Send to AI Planner</p>
+              <p className={styles.loadingText}>Generating your plan...</p>
               <div className={styles.submitIcon}>
                 <Image src="/images/icon_submit_white.svg" fill alt="" />
               </div>
@@ -128,19 +130,14 @@ export default function ClientAiPlanner() {
             {errorMsg && <p className={styles.errorMsg}>{errorMsg}</p>}
             {isThinking && (
               <p className={styles.loadingNote}>
-                返答までに数十秒かかります。少々お待ちください。
+                This may take a few moments. Please wait.
               </p>
             )}
           </form>
 
           {response && (
             <div className={`${styles.response} inner`} id="response">
-              <h3 className={styles.responseTitle}>
-                <div className={styles.responseTitleIcon}>
-                  <Image src="/images/icon_checkbox_green.svg" fill alt="" />
-                </div>
-                AIからの回答
-              </h3>
+              <h3 className={styles.responseTitle}>AI Planner Response</h3>
               <div className={styles.responseTextAndCounters}>
                 <div className={styles.responseText}>
                   <ReactMarkdown>{response}</ReactMarkdown>
@@ -148,7 +145,7 @@ export default function ClientAiPlanner() {
                 {countersData.length > 0 && (
                   <div className={styles.counterListArea}>
                     <h4 className={styles.counterListAreaTitle}>
-                      カウンター提案
+                      Recommended Counter
                     </h4>
                     <ul className={styles.counterList}>
                       {countersData.map((c, i) => {
@@ -169,7 +166,7 @@ export default function ClientAiPlanner() {
                               />
                               <LinkButton
                                 path={`/counters/${c.id}`}
-                                msg="カウンターの詳細へ"
+                                msg="View Counter Details"
                               />
                             </div>
                           </li>

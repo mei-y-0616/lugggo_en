@@ -8,23 +8,23 @@ export async function POST(request: NextRequest) {
   try {
     const data: FormValues = await request.json();
 
-    const text = `LuggGo!からのお問い合わせです。\n\nお名前：${data.name}\nフリガナ：${data.kana}\nメールアドレス：${data.mail}\n\n-----お問い合わせ内容-----\n${data.content}`;
+    const text = `LuggGo!からのお問い合わせです。\n\nお名前：${data.name}\nメールアドレス：${data.mail}\n\n-----お問い合わせ内容-----\n${data.content}`;
 
     resend.emails.send({
       from: "onboarding@resend.dev",
       to: "lugggo.wdc@gmail.com",
-      subject: `【LuggGoからのお問い合わせ】 ${data.name}(${data.kana}) 様`,
+      subject: `【LuggGoからのお問い合わせ】 ${data.name} 様`,
       text: text,
     });
 
     return NextResponse.json({
       success: true,
-      message: "API呼び出し成功",
+      message: "AI API request successful",
     });
   } catch (e) {
     return NextResponse.json({
       success: false,
-      message: "API呼び出し失敗",
+      message: "AI API request failed",
     });
   }
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Privacy() {
   return (
     <>
-      <PageTitle titleEn="Privacy" titleJa="プライバシーポリシー" />
+      <PageTitle titleEn="Privacy" titleJa="Privacy Plicy" />
       <section>
         <div className={styles.privacy}>
           <div>

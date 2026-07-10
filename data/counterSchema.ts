@@ -126,6 +126,7 @@ const counterSchema: string = `
   配送_海外配送_補償内容_その他（日本語） String?
   配送_海外配送_補償内容_その他（英語） String?
   カスタム_カウンター住所_フル String @default("") //都道府県、市町村コードを実際の名前に直した完全な住所の文字列
+  カスタム_カウンター住所_フル_（英語） String @default("") //都道府県、市町村コードを実際の名前に直した完全な住所の文字列の英語ver
 `;
 
 export default counterSchema;

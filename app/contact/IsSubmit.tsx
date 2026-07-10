@@ -6,33 +6,34 @@ import LinkButton from "@/components/LinkButton/LinkButton";
 export default function IsSubmit() {
   return (
     <>
-      <PageTitle titleEn="Contact" titleJa="お問い合わせ" />;
+      <PageTitle titleEn="Contact" titleJa="Contact" />;
       <div className="container">
         <section className={styles.submit}>
           <div className={styles.head}>
             <div className={styles.headIcon}>
               <Image src="/images/icon_check_green.svg" fill alt="" />
             </div>
-            <h3>お問い合わせ完了</h3>
+            <h3>Inquiry Submitted</h3>
           </div>
           <div className={styles.body}>
             <div className={styles.explain}>
               <p>
                 <strong>
-                  この度はお問い合わせありがとうございます。
+                  Thank you for contacting us.
                   <br />
-                  担当者よりご連絡させていただきます。
+                  A member of our team will get back to you shortly.
                 </strong>
               </p>
               <br />
               <p>
-                お問い合わせの混雑状況や内容により回答までお時間をいただく場合がございます。
+                Please note that, depending on the volume and nature of inquiries,
+                it may take some time for us to respond.
                 <br />
-                あらかじめご了承ください。
+                Thank you for your understanding.
               </p>
             </div>
             <div className={styles.btnWrapper}>
-              <LinkButton path="/" msg="TOPに戻る" />
+              <LinkButton path="/" msg="Back to Home" />
             </div>
           </div>
         </section>

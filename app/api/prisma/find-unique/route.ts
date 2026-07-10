@@ -11,14 +11,14 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: "API呼び出し成功",
+      message: "AI API request successful",
       res: counters,
     });
   } catch (e) {
     return NextResponse.json({
       success: false,
-      message: "API呼び出し失敗",
-      res: "エラーが発生しました。再度お試しください。",
+      message: "AI API request failed",
+      res: "An error occurred. Please try again.",
     });
   }
 }

@@ -32,7 +32,7 @@ function FormItem({
     <div className={styles.formItem}>
       <div className={styles.formItemHead}>
         <label htmlFor={nameEn}>{nameJa}</label>
-        <span className={styles.formItemTag}>必須</span>
+        <span className={styles.formItemTag}>Required</span>
       </div>
 
       <div className={styles.formItemBody}>
@@ -41,7 +41,7 @@ function FormItem({
           // name={nameEn}
           placeholder={placeholder}
           id={nameEn}
-          {...register(nameEn, { required: nameJa + "は必須です。" })}
+          {...register(nameEn, { required: nameJa + " is required." })}
         />
         {errors[nameEn] && (
           <p className={styles.formErrorMsg} style={{ color: "red" }}>
@@ -89,7 +89,7 @@ function Form({ setIsSubmit }: { setIsSubmit: (isSubmit: boolean) => void }) {
       } catch {
         setIsSubmitting(false);
         setSubmitErrorMsg(
-          "エラーが発生し送信できませんでした。再度お試しください。",
+          "An error occurred and your inquiry could not be sent. Please try again later.",
         );
       }
     }
@@ -104,42 +104,42 @@ function Form({ setIsSubmit }: { setIsSubmit: (isSubmit: boolean) => void }) {
       onSubmit={handleSubmit(onSubmit)}
     >
       <FormItem
-        nameJa="お名前"
+        nameJa="Name"
         nameEn="name"
-        placeholder="山田　太郎"
+        placeholder="John Smith"
         type="text"
         register={register}
         errors={errors}
       />
-      <FormItem
+      {/* <FormItem
         nameJa="フリガナ"
         nameEn="kana"
         placeholder="ヤマダ　タロウ"
         type="text"
         register={register}
         errors={errors}
-      />
+      /> */}
       <FormItem
-        nameJa="メールアドレス"
+        nameJa="Email Address"
         nameEn="mail"
-        placeholder="yamada@example.com"
+        placeholder="john@example.com"
         type="email"
         register={register}
         errors={errors}
       />
       <div className={`${styles.formItem} ${styles.formItemTextarea}`}>
         <div className={styles.formItemHead}>
-          <label htmlFor="content">お問い合わせ内容</label>
-          <span className={styles.formItemTag}>必須</span>
+          <label htmlFor="content">Inquiry Details</label>
+          <span className={styles.formItemTag}>Required</span>
         </div>
 
         <div className={styles.formTextareaBlock}>
           <div className={styles.formItemBody}>
             <textarea
-              placeholder="ここにお問い合わせ内容をお書きください。"
+              placeholder="Please enter your inquiry here."
               id="content"
               {...register("content", {
-                required: "お問い合わせ内容は必須です。",
+                required: "Inquiry Details is Required.",
               })}
             ></textarea>
             {errors.content && (
@@ -149,24 +149,26 @@ function Form({ setIsSubmit }: { setIsSubmit: (isSubmit: boolean) => void }) {
 
           <div className={styles.formNote}>
             <p>
-              お問い合わせの前に <strong>よくある質問</strong>{" "}
-              もご確認ください。
+              Please also check the
+              <strong> Frequently Asked Questions </strong>
+              before contacting us.
             </p>
             <br />
 
-            <p>【お問合せされる際の注意点】</p>
+            <p>【Important Notes Before Submitting an Inquiry】</p>
             <ul>
               <li>
-                「送信する」ボタンを押すと、LuggGo!運営へ実際にお問い合わせが送信されます。
+                Clicking the “Submit” button will send your inquiry directly to
+                the LuggGo! administration team.
+              </li>
+              <li>We will reply to the email address you provided.</li>
+              <li>
+                Depending on the volume and nature of inquiries, it may take
+                some time for us to respond. Thank you for your understanding.
               </li>
               <li>
-                回答はご記入いただいたメールアドレスにご連絡させていただきます。
-              </li>
-              <li>
-                お問い合わせの混雑状況や内容により回答までお時間をいただく場合がございます。あらかじめご了承ください。
-              </li>
-              <li>
-                お問い合わせが集中した場合、システムの都合により、お問い合わせの送信が一時的に失敗する場合がございます。
+                If we receive a large number of inquiries, technical issues may
+                temporarily prevent inquiries from being submitted successfully.
               </li>
             </ul>
           </div>
@@ -174,7 +176,7 @@ function Form({ setIsSubmit }: { setIsSubmit: (isSubmit: boolean) => void }) {
       </div>
 
       <button className={styles.formBtn}>
-        <p>{isSubmitting ? "送信中…" : "送信する"}</p>
+        <p>{isSubmitting ? "Submitting..." : "Submit"}</p>
         <div className={styles.formBtnIcon}>
           <Image src="/images/icon_form_white.svg" alt="" fill />
         </div>

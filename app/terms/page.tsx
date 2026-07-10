@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Terms() {
   return (
     <>
-      <PageTitle titleEn="Terms of Service" titleJa="利用規約" />
+      <PageTitle titleEn="Terms of Service" titleJa="Terms of Service" />
       <section>
         <div className={`${styles.terms}`}>
           <div>

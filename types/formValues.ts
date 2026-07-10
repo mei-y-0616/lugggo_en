@@ -1,6 +1,5 @@
 type FormValues = {
   name: string;
-  kana: string;
   mail: string;
   content: string;
 };

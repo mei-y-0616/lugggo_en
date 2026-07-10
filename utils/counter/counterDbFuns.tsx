@@ -3,7 +3,7 @@ import { judgeRunTime, getLanguage, getPrice } from "./counterFuns";
 
 type ShortCounter = {
   カウンターID: number;
-  事業者名: string;
+  事業者名: string | null;
   事業者住所: {
     都道府県コード: number;
     市町村コード: number;
@@ -197,20 +197,20 @@ export async function shorteningCounterData(idArray: Array<number>) {
     cFullDataArray.forEach((c) => {
       const cShortData: ShortCounter = {
         カウンターID: c.id,
-        事業者名: c.company_name_ja,
+        事業者名: c.company_name_en,
         事業者住所: {
           都道府県コード: c.company_pref_code,
           市町村コード: c.company_city_code,
-          大字丁目_番地等: c.company_address_ja,
+          大字丁目_番地等: c.company_address_en,
         },
-        カウンター名称: c.counter_name_ja,
+        カウンター名称: c.counter_name_en,
         カウンター住所: {
           都道府県コード: c.pref_code,
           市町村コード: c.city_code,
-          大字丁目_番地等: c.address_ja,
+          大字丁目_番地等: c.address_en,
           建物階層: c.floor,
           施設類型: getFacilityType(c.facility_type),
-          設置公共交通機関名又は最寄公共交通機関名: c.station_name_ja,
+          設置公共交通機関名又は最寄公共交通機関名: c.station_name_en,
           緯度: c.latitude,
           経度: c.longitude,
         },
@@ -250,7 +250,7 @@ export async function shorteningCounterData(idArray: Array<number>) {
             close: c.sun_close,
             is_holiday: c.sun_is_holiday,
           }),
-          その他: c.hours_notes_ja,
+          その他: c.hours_notes_en,
         },
         対応可能言語: getLanguage(c),
         免税店フラグ: getDutyFree(c.is_duty_free),
@@ -276,11 +276,11 @@ export async function shorteningCounterData(idArray: Array<number>) {
             "3辺長合計上限値(cm)": c.storage_max_dimensions,
             "最大重量上限値(kg)": c.storage_max_weight,
             "取扱金額上限値(円)": c.storage_max_value,
-            その他: c.storage_notes_ja,
+            その他: c.storage_notes_en,
           },
           補償内容: {
             取扱金額上限値: c.storage_insurance_limit,
-            その他: c.storage_insurance_notes_ja,
+            その他: c.storage_insurance_notes_en,
           },
         };
       }
@@ -300,15 +300,15 @@ export async function shorteningCounterData(idArray: Array<number>) {
             "3辺長合計上限値(cm)": c.delivery_sameday_max_dimensions,
             "最大重量上限値(kg)": c.delivery_sameday_max_weight,
             "取扱金額上限値(円)": c.delivery_sameday_max_value,
-            その他: c.delivery_sameday_notes_ja,
+            その他: c.delivery_sameday_notes_en,
           },
           補償内容: {
             取扱金額上限値: c.delivery_sameday_insurance_limit,
-            その他: c.delivery_sameday_insurance_notes_ja,
+            その他: c.delivery_sameday_insurance_notes_en,
           },
           受付時間締切: c.delivery_sameday_cutoff_time,
           最終配送時間: c.delivery_sameday_last_time,
-          配送先: c.delivery_sameday_dest_ja,
+          配送先: c.delivery_sameday_dest_en,
         };
       }
 
@@ -327,14 +327,14 @@ export async function shorteningCounterData(idArray: Array<number>) {
             "3辺長合計上限値(cm)": c.delivery_standard_max_dimensions,
             "最大重量上限値(kg)": c.delivery_standard_max_weight,
             "取扱金額上限値(円)": c.delivery_standard_max_value,
-            その他: c.delivery_standard_notes_ja,
+            その他: c.delivery_standard_notes_en,
           },
           補償内容: {
             取扱金額上限値: c.delivery_standard_insurance_limit,
-            その他: c.delivery_standard_insurance_notes_ja,
+            その他: c.delivery_standard_insurance_notes_en,
           },
           全国各地発送対応: getNationWide(c.delivery_standard_is_nationwide),
-          配送先: c.delivery_standard_dest_ja,
+          配送先: c.delivery_standard_dest_en,
         };
       }
 
@@ -353,11 +353,11 @@ export async function shorteningCounterData(idArray: Array<number>) {
             "3辺長合計上限値(cm)": c.delivery_overseas_max_dimensions,
             "最大重量上限値(kg)": c.delivery_overseas_max_weight,
             "取扱金額上限値(円)": c.delivery_overseas_max_value,
-            その他: c.delivery_overseas_notes_ja,
+            その他: c.delivery_overseas_notes_en,
           },
           補償内容: {
             取扱金額上限値: c.delivery_overseas_insurance_limit,
-            その他: c.delivery_overseas_insurance_notes_ja,
+            その他: c.delivery_overseas_insurance_notes_en,
           },
         };
       }
