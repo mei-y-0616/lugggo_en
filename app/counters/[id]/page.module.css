@@ -20,6 +20,7 @@
   justify-content: space-between;
   padding-bottom: 25px;
   border-bottom: 1px solid #D9D9D9;
+  align-items: start;
 }
 
 .counterDetail {
