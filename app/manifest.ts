@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'LuggGo!',
-    description: '【AIプランナー搭載】手ぶら観光/手ぶら観光カウンター情報サイト',
+    description: 'Japan Hands-Free Travel Guide (With AI Planner)',
     start_url: '/',
     display: 'standalone',
     background_color: '#F3F3F3',

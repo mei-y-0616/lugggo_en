@@ -18,16 +18,16 @@ export default function TagList({counter}:{counter:counter}) {
   }: any) {
     const services = [];
     if (has_storage) {
-      services.push("一時預かり");
+      services.push("Storage");
     }
     if (has_delivery_sameday) {
-      services.push("当日配送");
+      services.push("Same-day Delivery");
     }
     if (has_delivery_standard) {
-      services.push("一般配送");
+      services.push("Standard Delivery");
     }
     if (has_delivery_overseas) {
-      services.push("海外配送");
+      services.push("Overseas Delivery");
     }
 
     return services;

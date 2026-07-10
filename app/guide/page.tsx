@@ -8,17 +8,17 @@ import type { links } from "@/types/pageLink";
 import BeforeFooter from "@/components/BeforeFooter/BeforeFooter";
 
 export const metadata = {
-  title: "利用方法",
+  title: "How to Use",
 };
 
 const linkAry: links = [
   {
     href: "HowToUse",
-    name: "利用手順",
+    name: "How to Use",
   },
   {
     href: "Price",
-    name: "サービスの種類と参考料金",
+    name: "Service Types & Estimated Fees",
   },
 ];
 
@@ -29,8 +29,8 @@ export default function Guide() {
         titleEn="How to Use"
         titleJa={
           <span>
-            手ぶら観光カウンター
-            <span style={{ color: "var(--font)" }}>の利用方法</span>
+            <span style={{ color: "var(--font)" }}>How to Use </span> 
+            Hands-Free Travel Counter
           </span>
         }
       />

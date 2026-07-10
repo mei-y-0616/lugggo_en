@@ -88,7 +88,7 @@ export default function ClientAiPlanner() {
 
   return (
     <>
-      <PageTitle titleEn="AI Planner" titleJa="AI手ぶら観光プランナー" />
+      <PageTitle titleEn="AI Planner" titleJa="AI Hands-Free Travel Planner" />
       <div className="container">
         <section className={isThinking ? styles.isThinking : ""}>
           <div className={styles.intro}>

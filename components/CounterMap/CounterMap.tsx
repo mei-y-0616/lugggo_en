@@ -77,6 +77,7 @@ const CounterMap = memo(function CounterMap({
     <APIProvider
       apiKey={process.env.NEXT_PUBLIC_GCP_API_KEY || ""}
       onLoad={() => console.log("Maps API has loaded.")}
+      language="en"
     >
       <div className={styles.map}>
         <Map
@@ -88,6 +89,7 @@ const CounterMap = memo(function CounterMap({
           }}
           mapId="aedb8120b0aa062b539f703f"
           mapTypeControl={false}
+          
         >
           <Markers pois={counters} />
         </Map>

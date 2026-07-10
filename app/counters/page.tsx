@@ -1,7 +1,7 @@
 import ClientCounters from "./ClientCounters";
 
 export const metadata = {
-  title: "手ぶら観光カウンターを探す",
+  title: "Search Counters",
 };
 
 export default function Counters(){

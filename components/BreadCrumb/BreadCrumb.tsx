@@ -4,13 +4,13 @@ import { usePathname } from "next/navigation";
 import styles from "./BreadCrumb.module.css";
 
 const pathAltName: Record<string, string> = {
-  about: "手ぶら観光について",
-  guide: "利用方法",
-  counters: "カウンターを探す",
-  contact: "お問い合わせ",
-  "ai-planner": "AIプランナー",
-  "terms":"利用規約",
-  "privacy":"プライバシーポリシー",
+  about: "About",
+  guide: "How to Use",
+  counters: "Search Counters",
+  contact: "Contact",
+  "ai-planner": "AI Planner",
+  "terms":"Term of Service",
+  "privacy":"Privacy Policy",
 };
 
 export default function BreadCrumb({ pageName }: { pageName?: string }) {

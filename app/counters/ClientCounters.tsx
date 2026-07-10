@@ -15,10 +15,10 @@ import RunTime from "@/components/counter/RunTime/RunTime";
 import DetailItem from "@/components/counter/DetailItem/DetailItem";
 
 const serviceObj: Record<string, string> = {
-  has_storage: "一時預かり",
-  has_delivery_sameday: "当日配送",
-  has_delivery_standard: "一般配送",
-  has_delivery_overseas: "海外配送",
+  has_storage: "Storage",
+  has_delivery_sameday: "Same-day Delivery",
+  has_delivery_standard: "Standard Delivery",
+  has_delivery_overseas: "Overseas Delivery",
 };
 
 function SearchTag({
@@ -112,7 +112,7 @@ function SearchTag({
       </button>
 
       <div className={styles.searchTag}>
-        <h3 className={styles.searchTagTitle}>検索フィルター</h3>
+        <h3 className={styles.searchTagTitle}>Search Filter</h3>
         <div className={styles.searchTagTitleSub}>
           <Image
             src="/images/icon_area_green.svg"
@@ -120,7 +120,7 @@ function SearchTag({
             height={18}
             alt="アイコン"
           ></Image>
-          <h4>エリアで絞り込み</h4>
+          <h4>Filter by Area</h4>
         </div>
         <FromArea></FromArea>
         <div className={styles.searchTagTitleSub}>
@@ -130,7 +130,7 @@ function SearchTag({
             height={18}
             alt="アイコン"
           ></Image>
-          <h4>対応サービスで絞り込み</h4>
+          <h4>Filter by Service</h4>
         </div>
         <FromService></FromService>
       </div>
@@ -233,13 +233,13 @@ function SearchText({
   return (
     <>
       <div className={styles.searchText}>
-        <h3>フリーワード検索</h3>
+        <h3>Search by Keyword</h3>
         <div className={styles.searchBoxArea}>
           <input
             type="text"
             onChange={handleInputChange}
             value={searchTextTmp}
-            placeholder="カウンター名、地名などで検索"
+            placeholder="Search by Counter Name or Place Name etc..."
           />
           <button type="submit" onClick={handleClick}>
             <Image
@@ -248,7 +248,7 @@ function SearchText({
               height="18"
               alt="検索アイコン"
             ></Image>
-            <span>検索</span>
+            <span>Search</span>
           </button>
         </div>
       </div>
@@ -271,7 +271,7 @@ function SwitchDisplay({
             className={display === "list" ? styles.activeDisplay : ""}
             onClick={() => setDisplay("list")}
           >
-            リストで表示
+            List View
           </button>
         </li>
         <li>
@@ -279,7 +279,7 @@ function SwitchDisplay({
             className={display === "map" ? styles.activeDisplay : ""}
             onClick={() => setDisplay("map")}
           >
-            マップで表示
+            Map View
           </button>
         </li>
       </ul>
@@ -323,24 +323,25 @@ function SearchResult({
     <p className={styles.searchResult}>
       {(areas.length > 0 || services.length > 0 || searchText.length > 0) && (
         <>
+          Search Results for
           {searchAry.map((word, index) => (
             <span key={index}>
               {index !== 0 && "、"}
               {word}
             </span>
           ))}
-          の検索結果　
         </>
       )}
       {display === "list" && (
         <>
+          <span>Showing </span>
           <span className={styles.searchResultStrong}>
-            {start + Math.min(1, count)}～{Math.min(start + limit, count)}
+            {start + Math.min(1, count)}～{Math.min(start + limit, count)} 
           </span>
-          <span>件を表示 /</span>
+          <span> of </span>
         </>
       )}
-      全 <span className={styles.searchResultStrong}>{count}</span> 件
+       <span className={styles.searchResultStrong}>{count}</span> results 
     </p>
   );
 }
@@ -480,8 +481,8 @@ export default function ClientCounters() {
         titleEn="Search"
         titleJa={
           <span>
-            手ぶら観光カウンター
-            <span style={{ color: "var(--font)" }}>を探す</span>
+            <span style={{ color: "var(--font)" }}>Search </span>
+            Hands-Free Travel Counters
           </span>
         }
       ></PageTitle>
@@ -549,7 +550,7 @@ export default function ClientCounters() {
 
                               <LinkButton
                                 path={`/counters/${counter.id}`}
-                                msg="カウンターの詳細へ"
+                                msg="View Counter Details"
                               ></LinkButton>
                             </div>
                           </div>
@@ -571,7 +572,7 @@ export default function ClientCounters() {
 
                             <DetailItem
                               imageSrc="/images/icon_lang_gray.svg"
-                              explain={<p>対応言語：{getLanguage(counter)}</p>}
+                              explain={<p>Languages：{getLanguage(counter)}</p>}
                             />
                           </div>
 
@@ -594,7 +595,7 @@ export default function ClientCounters() {
 
                             <LinkButton
                               path={`/counters/${counter.id}`}
-                              msg="カウンターの詳細へ"
+                              msg="View Counter Details"
                             ></LinkButton>
                           </div>
                         </article>

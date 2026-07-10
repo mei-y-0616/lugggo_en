@@ -66,20 +66,20 @@ export default function Header() {
                 <Link href="/">TOP</Link>
               </li>
               <li>
-                <Link href="/about">手ぶら観光について</Link>
+                <Link href="/about">About</Link>
               </li>
               <li>
-                <Link href="/guide">利用方法</Link>
+                <Link href="/guide">How to Use</Link>
               </li>
               <li>
-                <Link href="/ai-planner">AIプランナー</Link>
+                <Link href="/ai-planner">AI Planner</Link>
               </li>
               <li>
-                <Link href="/counters">カウンターを探す</Link>
+                <Link href="/counters">Search Counters</Link>
               </li>
               <li>
                 <Link href="/contact" className={styles.navListContact}>
-                  お問い合わせ
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -129,7 +129,7 @@ export default function Header() {
                   setIsActive(false);
                 }}
               >
-                手ぶら観光について
+                About
               </Link>
             </li>
             <li>
@@ -139,7 +139,7 @@ export default function Header() {
                   setIsActive(false);
                 }}
               >
-                利用方法
+                How to Use
               </Link>
             </li>
             <li>
@@ -149,7 +149,7 @@ export default function Header() {
                   setIsActive(false);
                 }}
               >
-                AIプランナー
+                AI Planner
               </Link>
             </li>
             <li>
@@ -159,7 +159,7 @@ export default function Header() {
                   setIsActive(false);
                 }}
               >
-                カウンターを探す
+                Search Counters
               </Link>
             </li>
             <li>
@@ -169,7 +169,7 @@ export default function Header() {
                   setIsActive(false);
                 }}
               >
-                お問い合わせ
+                Contact
               </Link>
             </li>
           </ul>

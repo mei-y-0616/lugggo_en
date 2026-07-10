@@ -1,7 +1,7 @@
 import ContactClient from "./ContactClient";
 
 export const metadata = {
-  title: "お問い合わせ",
+  title: "Contact",
 };
 
 

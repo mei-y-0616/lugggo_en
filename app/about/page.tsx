@@ -8,13 +8,13 @@ import type {links} from "@/types/pageLink"
 import BeforeFooter from "@/components/BeforeFooter/BeforeFooter";
 
 export const metadata = {
-  title: "手ぶら観光について",
+  title: "About",
 };
 const links:links = [
-  { href: "About", name: "手ぶら観光とは" },
-  { href: "Counter", name: "手ぶら観光カウンター" },
-  { href: "Merit", name: "利用するメリット" },
-  { href: "Manner", name: "荷物マナー" },
+  { href: "About", name: "What is Hands-Free Travel?" },
+  { href: "Counter", name: "Hands-Free Travel Counters" },
+  { href: "Merit", name: "Benefits" },
+  { href: "Manner", name: "Luggage Etiquette" },
 ];
 
 export default function About() {
@@ -24,7 +24,7 @@ export default function About() {
         titleEn="About"
         titleJa={
           <span>
-            手ぶら観光<span style={{ color: "var(--font)" }}>について</span>
+            <span style={{ color: "var(--font)" }}>About</span> Hands-Free Travel
           </span>
         }
       />

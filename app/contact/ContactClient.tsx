@@ -218,7 +218,7 @@ export default function ContactClient() {
   }
   return (
     <>
-      <PageTitle titleEn="Contact" titleJa="お問い合わせ" />
+      <PageTitle titleEn="Contact" titleJa="Contact" />
       <div className="container">
         <section id="faq">
           <SectTitle titleEn="Q ＆ A" titleJa={<span>よくある質問</span>} />

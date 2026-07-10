@@ -19,8 +19,7 @@ export const metadata = {
     template: "%s | LuggGo!",
     default: "LuggGo!",
   },
-  description:
-    "日本の「手ぶら観光」と「手ぶら観光カウンター」について掲載しています。カウンター検索機能の他、AIがあなたの旅程にぴったりの手ぶら観光カウンターをご提案する「AI手ぶら観光プランナー」を搭載。",
+  description:`This website provides information on Japan's "Hands-Free Travel" services and service counters. In addition to our Counter Search feature, you can use the "AI Hands-Free Travel Planner" to get personalized recommendations for the best counters based on your itinerary.`,
 
   openGraph: {
     images: [

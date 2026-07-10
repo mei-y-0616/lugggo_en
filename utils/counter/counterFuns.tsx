@@ -23,7 +23,7 @@ export function getParsePhone(phone: string | null) {
       return phone;
     }
   } else {
-    return "データなし";
+    return "No Data";
   }
 }
 
@@ -45,7 +45,7 @@ export function judgeRunTime({
   // const o = open?.padEnd(3, "0");
   // const c = close?.padEnd(3, "0");
   if (is_holiday === 1) {
-    return "定休日";
+    return "Closed";
   } else if (open !== null && close !== null) {
     return parseTime(open) + "～" + parseTime(close);
   } else if (open == null && close != null) {
@@ -61,19 +61,19 @@ export function judgeRunTime({
 export function getLanguage(c: counter) {
   const language = [];
   if (c.lang_en === 1) {
-    language.push("英語");
+    language.push("English");
   }
   if (c.lang_zh_cn === 1) {
-    language.push("中国語(簡体字)");
+    language.push("简体中文");
   }
   if (c.lang_zh_tw === 1) {
-    language.push("中国語(繁体字)");
+    language.push("繁體中文");
   }
   if (c.lang_ko === 1) {
-    language.push("韓国語");
+    language.push("한국어");
   }
   if (c.lang_th === 1) {
-    language.push("タイ語");
+    language.push("ไทย");
   }
   const languageStr = language.join("/");
   if (c.lang_others_en) {
@@ -82,7 +82,7 @@ export function getLanguage(c: counter) {
   if (languageStr.length > 0) {
     return languageStr;
   } else {
-    return "データなし";
+    return "No Data";
   }
 }
 

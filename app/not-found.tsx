@@ -1,7 +1,7 @@
 import styles from "./notFound.module.css";
 
 export const metadata={
-  title:"お探しのページは見つかりませんでした。"
+  title:"The Requested URL was not found on this server."
 }
 
 export default function NotFound() {

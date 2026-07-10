@@ -23,30 +23,30 @@ export default function Footer() {
           <div className={styles.footerLinks}>
             <ul>
               <li>
-                <Link href="about">手ぶら観光とは</Link>
+                <Link href="about">About Hands-Free Travel</Link>
               </li>
               <li>
-                <Link href="/guide">手ぶら観光カウンターの利用方法</Link>
+                <Link href="/guide">How to Use Hands-Free Travel Counter</Link>
               </li>
               <li>
-                <Link href="ai-planner">AI手ぶら観光プランナー</Link>
+                <Link href="ai-planner">AI Hands-Free Travel Planner</Link>
               </li>
               <li>
-                <Link href="counters">手ぶら観光カウンターを探す</Link>
+                <Link href="counters">Search Hands-Free Travel Counters</Link>
               </li>
             </ul>
             <ul>
               <li>
-                <Link href="/contact#faq">よくある質問</Link>
+                <Link href="/contact#faq">FAQ</Link>
               </li>
               <li>
-                <Link href="/contact#contact">お問い合わせ</Link>
+                <Link href="/contact#contact">Contact</Link>
               </li>
               <li>
-                <Link href="/terms">利用規約</Link>
+                <Link href="/terms">Term of Service</Link>
               </li>
               <li>
-                <Link href="/privacy">プライバシーポリシー</Link>
+                <Link href="/privacy">Privacy Policy</Link>
               </li>
             </ul>
           </div>
@@ -55,7 +55,10 @@ export default function Footer() {
         <div className={styles.footerBottom}>
           <p className={styles.copy}>© 2026 LuggGo!</p>
           <p className={styles.footerBottomNote}>
-            当Webサイトは「手ぶら観光カウンター情報オープンデータ」(国土交通省)(https://www.mlit.go.jp/seisakutokatsu/freight/seisakutokatsu_freight_tk1_000141.html)を元に作成しました。
+            This website was created using the "Hands-Free Travel Counter Open
+            Data" provided by the Ministry of Land, Infrastructure, Transport
+            and Tourism (MLIT).
+            (https://www.mlit.go.jp/seisakutokatsu/freight/seisakutokatsu_freight_tk1_000141.html)
           </p>
         </div>
       </div>

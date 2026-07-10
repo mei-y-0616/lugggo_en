@@ -1,42 +1,42 @@
 export const areaObj = {
   "1": {
-    name: "北海道",
+    name: "Hokkaido",
     prefs: [1],
   },
   "2": {
-    name: "東北",
+    name: "Tohoku",
     prefs: [2, 3, 4, 5, 6, 7],
   },
   "3": {
-    name: "関東",
+    name: "Kanto",
     prefs: [8, 9, 10, 11, 12, 13, 14],
   },
   "4": {
-    name: "北陸",
+    name: "Hokuriku",
     prefs: [15, 16, 17, 18],
   },
   "5": {
-    name: "中部",
+    name: "Chubu",
     prefs: [19, 20, 21, 22, 23],
   },
   "6": {
-    name: "近畿",
+    name: "Kansai",
     prefs: [24, 25, 26, 27, 28, 29, 30],
   },
   "7": {
-    name: "中国",
+    name: "Chugoku",
     prefs: [31, 32, 33, 34, 35],
   },
   "8": {
-    name: "四国",
+    name: "Shikoku",
     prefs: [36, 37, 38, 39],
   },
   "9": {
-    name: "九州",
+    name: "Kyushu",
     prefs: [40, 41, 42, 43, 44, 45, 46],
   },
   "10": {
-    name: "沖縄",
+    name: "Okinawa",
     prefs: [47],
   },
 };

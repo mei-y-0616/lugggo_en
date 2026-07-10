@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Prop) {
     const counter = await getCounter(Number(id));
     if (counter === null) {
       return {
-        title: "お探しのページは見つかりませんでした。",
+        title: "404 Not Found",
       };
     } else {
       return {
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Prop) {
     }
   } else {
     return {
-      title: "お探しのページは見つかりませんでした。",
+      title: "404 Not Found",
     };
   }
 }

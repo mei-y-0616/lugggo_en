@@ -46,8 +46,9 @@ export default function CounterClient({
         titleEn="Search"
         titleJa={
           <span>
-            手ぶら観光カウンター
-            <span style={{ color: "var(--font)" }}>を探す - 詳細</span>
+            <span style={{ color: "var(--font)" }}>Search </span>
+            Hands-Free Counters
+            <span style={{ color: "var(--font)" }}> - Detail</span>
           </span>
         }
         pageName={c.counter_name_en}
@@ -80,13 +81,13 @@ export default function CounterClient({
                   <div className={styles.counterDetailRight}>
                     <DetailItem
                       imageSrc="/images/icon_lang_gray.svg"
-                      explain={<p>対応言語：{getLanguage(counter)}</p>}
+                      explain={<p>Language：{getLanguage(counter)}</p>}
                     />
                     {c.station_name_en && (
                       <DetailItem
                         imageSrc="/images/icon_station_gray.svg"
                         explain={
-                          <p>設置・最寄り公共交通機関：{c.station_name_en}</p>
+                          <p>Location & Nearest Public Transportation：{c.station_name_en}</p>
                         }
                       />
                     )}
@@ -95,7 +96,7 @@ export default function CounterClient({
                         imageSrc="/images/icon_url_gray.svg"
                         explain={
                           <p style={{ wordBreak: "break-all" }}>
-                            関連サイトURL：
+                            Official Website：
                             {/* <Link
                               href={c.website_url}
                               className="break-all"
@@ -122,13 +123,13 @@ export default function CounterClient({
               </div>
 
               <div className={styles.serviceArea}>
-                <h3 className={styles.serviceAreaTitle}>対応サービス</h3>
+                <h3 className={styles.serviceAreaTitle}>Available Services</h3>
                 <div className={styles.serviceGrid}>
                   {/* 一時預かり */}
                   {c.has_storage === 1 && (
                     <div className={styles.serviceBlock}>
                       <div className={styles.serviceBlockHead}>
-                        <h4 className={styles.serviceName}>一時預かり</h4>
+                        <h4 className={styles.serviceName}>Storage</h4>
                         <p className={styles.servicePrice}>
                           ￥
                           <Price
@@ -142,17 +143,17 @@ export default function CounterClient({
                       <table className={styles.serviceTable}>
                         <tbody>
                           <tr>
-                            <th>取扱品目</th>
+                            <th>Accepted Items</th>
                             <td>
                               <div className={styles.serviceItem}>
                                 {c.storage_item_suitcase === "1" && (
-                                  <span>スーツケース</span>
+                                  <span>SuitCases</span>
                                 )}
                                 {c.storage_item_chilled === "1" && (
-                                  <span>クール</span>
+                                  <span>Refrigerated</span>
                                 )}
                                 {c.storage_item_souvenir === "1" && (
-                                  <span>お土産</span>
+                                  <span>Souvenirs</span>
                                 )}
                               </div>
                               {(c.storage_max_dimensions ||
@@ -161,16 +162,16 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.storage_max_dimensions && (
                                     <p>
-                                      3辺長合計の上限：
+                                      Max Total Dimensions：
                                       {c.storage_max_dimensions}cm
                                     </p>
                                   )}
                                   {c.storage_max_weight && (
-                                    <p>最大重量：{c.storage_max_weight}kg</p>
+                                    <p>Max Weight：{c.storage_max_weight}kg</p>
                                   )}
                                   {c.storage_max_value && (
                                     <p>
-                                      取扱金額の上限：{c.storage_max_value}円
+                                      Max Declared Value：￥{c.storage_max_value}
                                     </p>
                                   )}
                                 </div>
@@ -183,14 +184,13 @@ export default function CounterClient({
                             </td>
                           </tr>
                           <tr>
-                            <th>補償内容</th>
+                            <th>Compensation</th>
                             <td>
                               {c.storage_insurance_limit && (
                                 <div className={styles.serviceDetail}>
                                   {c.storage_insurance_limit && (
                                     <p>
-                                      補償金額：{c.storage_insurance_limit}
-                                      円まで
+                                      Amount of Compensation：Up to ￥{c.storage_insurance_limit}
                                     </p>
                                   )}
                                 </div>
@@ -211,7 +211,7 @@ export default function CounterClient({
                   {c.has_delivery_sameday === 1 && (
                     <div className={styles.serviceBlock}>
                       <div className={styles.serviceBlockHead}>
-                        <h4 className={styles.serviceName}>当日配送</h4>
+                        <h4 className={styles.serviceName}>Same-day Delivery</h4>
                         <p className={styles.servicePrice}>
                           ￥
                           <Price
@@ -225,17 +225,17 @@ export default function CounterClient({
                       <table className={styles.serviceTable}>
                         <tbody>
                           <tr>
-                            <th>取扱品目</th>
+                            <th>Accepted Items</th>
                             <td>
                               <div className={styles.serviceItem}>
                                 {c.delivery_sameday_item_suitcase === "1" && (
-                                  <span>スーツケース</span>
+                                  <span>SuitCases</span>
                                 )}
                                 {c.delivery_sameday_item_chilled === "1" && (
-                                  <span>クール</span>
+                                  <span>Refrigerated</span>
                                 )}
                                 {c.delivery_sameday_item_souvenir === "1" && (
-                                  <span>お土産</span>
+                                  <span>Souvenirs</span>
                                 )}
                               </div>
                               {(c.delivery_sameday_max_dimensions ||
@@ -244,20 +244,20 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_sameday_max_dimensions && (
                                     <p>
-                                      3辺長合計の上限：
+                                      Max Total Dimensions：
                                       {c.delivery_sameday_max_dimensions}cm
                                     </p>
                                   )}
                                   {c.delivery_sameday_max_weight && (
                                     <p>
-                                      最大重量：{c.delivery_sameday_max_weight}
+                                      Max Weight：{c.delivery_sameday_max_weight}
                                       kg
                                     </p>
                                   )}
                                   {c.delivery_sameday_max_value && (
                                     <p>
-                                      取扱金額の上限：
-                                      {c.delivery_sameday_max_value}円
+                                      Max Declared Value：
+                                      ￥{c.delivery_sameday_max_value}
                                     </p>
                                   )}
                                 </div>
@@ -270,15 +270,14 @@ export default function CounterClient({
                             </td>
                           </tr>
                           <tr>
-                            <th>補償内容</th>
+                            <th>Compensation</th>
                             <td>
                               {c.delivery_sameday_insurance_limit && (
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_sameday_insurance_limit && (
                                     <p>
-                                      補償金額：
-                                      {c.delivery_sameday_insurance_limit}
-                                      円まで
+                                      Amount of Compensation：
+                                      Up to ￥{c.delivery_sameday_insurance_limit}
                                     </p>
                                   )}
                                 </div>
@@ -293,12 +292,12 @@ export default function CounterClient({
                           {(c.delivery_sameday_cutoff_time ||
                             c.delivery_sameday_last_time) && (
                             <tr>
-                              <th>締切時間</th>
+                              <th>Cut-off Time</th>
                               <td>
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_sameday_cutoff_time && (
                                     <p>
-                                      受付締切：
+                                      Last Acceptance Time：
                                       {parseTime(
                                         c.delivery_sameday_cutoff_time,
                                       )}
@@ -306,7 +305,7 @@ export default function CounterClient({
                                   )}
                                   {c.delivery_sameday_last_time && (
                                     <p>
-                                      最終配送時間：
+                                      Latest Delivery Time：
                                       {parseTime(c.delivery_sameday_last_time)}
                                     </p>
                                   )}
@@ -317,7 +316,7 @@ export default function CounterClient({
 
                           {c.delivery_sameday_dest_en && (
                             <tr>
-                              <th>配送先</th>
+                              <th>Delivery Destinations</th>
                               <td>
                                 <div className={styles.serviceDetail}>
                                   <p>{c.delivery_sameday_dest_en}</p>
@@ -334,7 +333,7 @@ export default function CounterClient({
                   {c.has_delivery_standard === 1 && (
                     <div className={styles.serviceBlock}>
                       <div className={styles.serviceBlockHead}>
-                        <h4 className={styles.serviceName}>一般配送</h4>
+                        <h4 className={styles.serviceName}>Standard Delivery</h4>
                         <p className={styles.servicePrice}>
                           ￥
                           <Price
@@ -348,17 +347,17 @@ export default function CounterClient({
                       <table className={styles.serviceTable}>
                         <tbody>
                           <tr>
-                            <th>取扱品目</th>
+                            <th>Accepted Items</th>
                             <td>
                               <div className={styles.serviceItem}>
                                 {c.delivery_standard_item_suitcase === "1" && (
-                                  <span>スーツケース</span>
+                                  <span>SuitCases</span>
                                 )}
                                 {c.delivery_standard_item_chilled === "1" && (
-                                  <span>クール</span>
+                                  <span>Refrigerated</span>
                                 )}
                                 {c.delivery_standard_item_souvenir === "1" && (
-                                  <span>お土産</span>
+                                  <span>Souvenirs</span>
                                 )}
                               </div>
                               {(c.delivery_standard_max_dimensions ||
@@ -367,20 +366,20 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_standard_max_dimensions && (
                                     <p>
-                                      3辺長合計の上限：
+                                      Max Total Dimensions：
                                       {c.delivery_standard_max_dimensions}cm
                                     </p>
                                   )}
                                   {c.delivery_standard_max_weight && (
                                     <p>
-                                      最大重量：{c.delivery_standard_max_weight}
+                                      Max Weight：{c.delivery_standard_max_weight}
                                       kg
                                     </p>
                                   )}
                                   {c.delivery_standard_max_value && (
                                     <p>
-                                      取扱金額の上限：
-                                      {c.delivery_standard_max_value}円
+                                      Max Declared Value：
+                                      ￥{c.delivery_standard_max_value}
                                     </p>
                                   )}
                                 </div>
@@ -393,15 +392,14 @@ export default function CounterClient({
                             </td>
                           </tr>
                           <tr>
-                            <th>補償内容</th>
+                            <th>Compensation</th>
                             <td>
                               {c.delivery_standard_insurance_limit && (
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_sameday_insurance_limit && (
                                     <p>
-                                      補償金額：
-                                      {c.delivery_standard_insurance_limit}
-                                      円まで
+                                      Amount of Compensation：
+                                      Up to ￥{c.delivery_standard_insurance_limit}
                                     </p>
                                   )}
                                 </div>
@@ -416,12 +414,12 @@ export default function CounterClient({
 
                           {c.delivery_standard_is_nationwide && (
                             <tr>
-                              <th>配送先</th>
+                              <th>Delivery Destinations</th>
                               <td>
                                 {c.delivery_standard_is_nationwide === "1" && (
                                   <>
                                     <div className={styles.serviceDetail}>
-                                      <p>全国各地発送可能</p>
+                                      <p>Delivery Available Nationwide</p>
                                     </div>
                                     {c.delivery_standard_dest_en && (
                                       <p className={styles.serviceNote}>
@@ -447,7 +445,7 @@ export default function CounterClient({
                   {c.has_delivery_overseas === 1 && (
                     <div className={styles.serviceBlock}>
                       <div className={styles.serviceBlockHead}>
-                        <h4 className={styles.serviceName}>海外配送</h4>
+                        <h4 className={styles.serviceName}>Overseas Delivery</h4>
                         <p className={styles.servicePrice}>
                           ￥
                           <Price
@@ -461,35 +459,35 @@ export default function CounterClient({
                       <table className={styles.serviceTable}>
                         <tbody>
                           <tr>
-                            <th>取扱品目</th>
+                            <th>Accepted Items</th>
                             <td>
                               <div className={styles.serviceItem}>
                                 {c.delivery_overseas_item_suitcase === "1" && (
-                                  <span>スーツケース</span>
+                                  <span>SuitCases</span>
                                 )}
                                 {c.delivery_overseas_item_chilled === "1" && (
-                                  <span>クール</span>
+                                  <span>Refrigerated</span>
                                 )}
                                 {c.delivery_overseas_item_souvenir === "1" && (
-                                  <span>お土産</span>
+                                  <span>Souvenirs</span>
                                 )}
                               </div>
                               <div className={styles.serviceDetail}>
                                 {c.delivery_overseas_max_dimensions && (
                                   <p>
-                                    3辺長合計の上限：
+                                    Max Total Dimensions：
                                     {c.delivery_overseas_max_dimensions}cm
                                   </p>
                                 )}
                                 {c.delivery_overseas_max_weight && (
                                   <p>
-                                    最大重量：{c.delivery_overseas_max_weight}kg
+                                    Max Weight：{c.delivery_overseas_max_weight}kg
                                   </p>
                                 )}
                                 {c.delivery_overseas_max_value && (
                                   <p>
-                                    取扱金額の上限：
-                                    {c.delivery_overseas_max_value}円
+                                    Max Declared Value：
+                                    ￥{c.delivery_overseas_max_value}
                                   </p>
                                 )}
                               </div>
@@ -501,14 +499,13 @@ export default function CounterClient({
                             </td>
                           </tr>
                           <tr>
-                            <th>補償内容</th>
+                            <th>Compensation</th>
                             <td>
                               <div className={styles.serviceDetail}>
                                 {c.delivery_sameday_insurance_limit && (
                                   <p>
-                                    補償金額：
-                                    {c.delivery_overseas_insurance_limit}
-                                    円まで
+                                    Amount of Compensation：
+                                    Up to ￥{c.delivery_overseas_insurance_limit}
                                   </p>
                                 )}
                               </div>
@@ -527,7 +524,7 @@ export default function CounterClient({
               </div>
 
               <div className={styles.linkButtonArea}>
-                <LinkButton path="/counters" msg="カウンター一覧に戻る" />
+                <LinkButton path="/counters" msg="Back to Counter List" />
               </div>
             </div>
           </div>

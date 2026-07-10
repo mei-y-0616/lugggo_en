@@ -1,7 +1,7 @@
 import ClientAiPlanner from "./ClientAiPlanner";
 
 export const metadata = {
-  title: "AI手ぶら観光プランナー",
+  title: "AI Planner",
 };
 
 export default function AiPlanner() {
