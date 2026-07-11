@@ -1,3 +1,35 @@
+# これをPCで動かす方法（詰まったら教えて！）
+## 1.リポジトリをクローン
+VSCodeのターミナルでこのプロジェクトのフォルダを作るフォルダに移動
+↓
+以下をターミナルで実行
+```
+git clone https://github.com/mei-y-0616/lugggo_en.git
+cd lugggo_en
+```
+
+
+## 2.依存パッケージをインストール
+以下をターミナルで実行
+```
+npm install
+```
+
+
+## 3.「環境変数ファイル」をつくる
+これはセキュリティ上の問題で、GitHubには上げていません！
+なので、私に連絡して、環境変数ファイルなるものを貰ってください！
+欲しくなったらいつでもあげます。
+
+## 4.起動する
+以下をターミナルで実行して、http://localhost:3000/
+に接続すると、LuggGo!が見えるはずです。
+停止したい場合はターミナルで**Ctrl+C**と打つとできます。
+
+私もよく分かってないので上手くいかないところがあったら連絡してください！
+
+
+---
 # [LuggGo!](https://lugggo.up.railway.app/)
 LuggGo! is an information website dedicated to hands-free travel and hands-free travel counters in Japan.
 
