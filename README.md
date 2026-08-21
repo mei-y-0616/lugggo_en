@@ -36,13 +36,13 @@ npm run dev
 
 
 ---
-# [LuggGo!](https://lugggo.up.railway.app/)
+# [LuggGo!](https://lugggo-en.up.railway.app/)
 LuggGo! is an information website dedicated to hands-free travel and hands-free travel counters in Japan.
 
 ## Introduction
 This website was developed using Next.js.
 You can visit the live, deployed site at the following URL. Please take a look!
-[https://lugggo.up.railway.app/](https://lugggo.up.railway.app/)
+[https://lugggo-en.up.railway.app/](https://lugggo-en.up.railway.app/)
 
 You can also watch a demonstration video of the "AI Hands-Free Travel Planner" via the following unlisted YouTube link:
 [https://youtu.be/Q_sWUrRBPXQ](https://youtu.be/Q_sWUrRBPXQ)
