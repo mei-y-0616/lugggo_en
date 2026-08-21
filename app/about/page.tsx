@@ -39,17 +39,17 @@ export default function About() {
                     titleEn="About"
                     titleJa={
                       <span>
-                        <span style={{ color: "var(--main)" }}>手ぶら観光</span>
-                        とは
+                        What Is 
+                        <span style={{ color: "var(--main)" }}> Hands-Free Travel</span>
+                        ?
                       </span>
                     }
                   />
                   <p className={styles.SectionP}>
-                    「 手ぶら観光
-                    」とは、重い荷物を空港や駅、商業施設などに預けたり、ホテルや海外の自宅等へ配送したりして、身軽に旅を楽しむスタイルのことです。
-                    国土交通省は手ぶら観光のできる環境づくりを2013年度より進めています。
-                    旅行者は手ぶら観光を取り入れることで、重い荷物から解放され、より自由に移動できたり、もっと買い物しやすくなります。
-                    さらに、旅行者が手ぶら観光を取り入れ、持ち運ぶ荷物が少なくなることで、観光地や公共交通機関の混雑解消も期待されます。
+                    "Hands-Free Travel" is a way of enjoying your trip unburdened — by leaving your heavy luggage at airports, stations, or commercial facilities, or having it delivered to your hotel or to your home overseas.
+                    Since fiscal year 2013, Japan's Ministry of Land, Infrastructure, Transport and Tourism (MLIT) has been working to create an environment that makes hands-free travel possible.
+                    By traveling hands-free, travelers are freed from heavy luggage, can move around more freely, and can shop more easily.
+                    What's more, as travelers adopt hands-free travel and carry fewer belongings, it is also expected to help ease congestion at tourist spots and on public transportation.
                   </p>
                 </div>
                 <div className={styles.AboutInnerImg}>
@@ -65,26 +65,26 @@ export default function About() {
                     titleEn="Counter"
                     titleJa={
                       <span>
-                        <span style={{ color: "var(--main)" }}>
-                          手ぶら観光カウンター
+                        About 
+                        <span style={{ color: "var(--main)" }}> Hands-Free Travel Counters
                         </span>
-                        について
                       </span>
                     }
                   />
                   <p className={styles.CounterInnerP}>
-                    「手ぶら観光カウンター」とは、スーツケースやお土産を預けたり、配送できるカウンターです。英語での案内が可能である、補償内容を掲示しているなど、いくつかの基準をクリアし国土交通省の認定を受けています。
-                    このロゴは手ぶら観光カウンターとして認定された場所を表す共通ロゴマークです。
-                    手ぶら観光カウンターの詳しい利用手順は以下からご覧いただけます。
+                    A "Hands-Free Travel Counter" is a counter where you can leave or ship your suitcases and souvenirs.
+                    These counters are certified by MLIT after meeting several criteria, such as being able to provide guidance in English and clearly displaying their compensation coverage.
+                    This logo is the common mark that identifies a location certified as a Hands-Free Travel Counter.
+                    You can find detailed instructions for using a Hands-Free Travel Counter below.
                   </p>
-                  <LinkButton path="/guide" msg="利用方法へ" />
+                  <LinkButton path="/guide" msg="How to Use" />
                 </div>
                 <div className={styles.CounterInnerImgWrapper}>
                   <div className={styles.CounterInnerImg}>
-                    <Image src="/images/img_about_mark.png" fill alt="" />
+                    <Image src="/images/img_about_mark_en.png" fill alt="" />
                   </div>
                   <p className={styles.CounterInnerImgNote}>
-                    出展：国土交通省ウェブサイト（https://www.mlit.go.jp/seisakutokatsu/freight/seisakutokatsu_freight_tk1_000069.html）
+                    Source: Ministry of Land, Infrastructure, Transport and Tourism website(https://www.mlit.go.jp/seisakutokatsu/freight/seisakutokatsu_freight_tk1_000069.html)
                   </p>
                 </div>
               </div>
@@ -96,11 +96,9 @@ export default function About() {
                   titleEn="Merit"
                   titleJa={
                     <span>
-                      <span style={{ color: "var(--main)" }}>
-                        手ぶら観光カウンター
+                      Benefits of Using a{" "}
+                      <span style={{ color: "var(--main)" }}> Hands-Free Travel Counter
                       </span>
-                      を利用する
-                      <span style={{ color: "var(--main)" }}>メリット</span>
                     </span>
                   }
                 />
@@ -116,9 +114,9 @@ export default function About() {
                       alt=""
                     />
                   </div>
-                  <h3 className={styles.AboutCardTitle}>空きがない！を回避</h3>
+                  <h3 className={styles.AboutCardTitle}>Avoid the "No Space Left!" Problem</h3>
                   <p className={styles.AboutCardP}>
-                    ロッカーと違い、荷物をラックや倉庫で保管するので、空きがなく預けられない！といったことが起きづらいです。
+                    Unlike lockers, your luggage is kept on racks or in a storeroom, so you are far less likely to run into a situation where there is no space available to store your bags.
                   </p>
                 </div>
 
@@ -132,10 +130,10 @@ export default function About() {
                     />
                   </div>
                   <h3 className={styles.AboutCardTitle}>
-                    どんな形の荷物でもOK
+                    Luggage of Any Shape Is Welcome
                   </h3>
                   <p className={styles.AboutCardP}>
-                    形状に制限がないことが多いので、スーツケースからスキー板など様々な形状の荷物を預けることができます。（※一部制限あり）
+                    There are often no restrictions on shape, so you can store all kinds of items — from suitcases to skis. (*Some restrictions may apply.)
                   </p>
                 </div>
 
@@ -149,10 +147,10 @@ export default function About() {
                     />
                   </div>
                   <h3 className={styles.AboutCardTitle}>
-                    配送でより旅行を楽しく
+                    Delivery Makes Your Trip More Enjoyable
                   </h3>
                   <p className={styles.AboutCardP}>
-                    荷物配送サービスを使えば、空港で預けてホテルで受け取る、ということが可能になるので、預け先に荷物を取りに行く必要もなくなり、より楽に観光を楽しむことができます。
+                    With a luggage delivery service, you can drop your bags off at the airport and receive them at your hotel. There is no need to go back and collect them, so you can enjoy sightseeing far more comfortably.
                   </p>
                 </div>
               </div>
@@ -164,10 +162,9 @@ export default function About() {
                   titleEn="Manner"
                   titleJa={
                     <span>
-                      <span style={{ color: "var(--main)" }}>
-                        日本の公共交通機関
+                      Luggage Etiquette on{" "}
+                      <span style={{ color: "var(--main)" }}>Japan's Public Transportation
                       </span>
-                      での荷物マナー
                     </span>
                   }
                 />
@@ -183,22 +180,22 @@ export default function About() {
                         height={18}
                         alt=""
                       />
-                      <p>避けたいポイント</p>
+                      <p>Things to Avoid</p>
                     </div>
                   </div>
                   <div className={styles.AboutFlexSub}>
                     <p className={styles.AboutP}>
-                      ラッシュの時間帯に大きな荷物を持ち込まない
+                      Avoid bringing large luggage on board during rush hour.
                     </p>
                   </div>
                   <div className={styles.AboutFlexSub}>
                     <p className={styles.AboutP}>
-                      ほかの座席にスーツケースなどの荷物を置かない
+                      Do not place suitcases or other luggage on empty seats.
                     </p>
                   </div>
                   <div className={styles.AboutFlexSub}>
                     <p className={styles.AboutP}>
-                      荷物で通路やドア付近をふさがない
+                      Do not block aisles or the areas near the doors with your luggage.
                     </p>
                   </div>
                 </div>
@@ -212,18 +209,18 @@ export default function About() {
                         height={18}
                         alt=""
                       />
-                      <p>より快適な旅にするポイント</p>
+                      <p>Tips for a More Comfortable Trip</p>
                     </div>
                   </div>
 
                   <div className={styles.AboutFlexSub}>
                     <p className={styles.AboutP}>
-                      できるだけ手ぶら観光カウンターやロッカーを使用して持ち運ぶ荷物を減らす
+                      Reduce the amount you carry by using Hands-Free Travel Counters or lockers whenever possible.
                     </p>
                   </div>
                   <div className={styles.AboutFlexSub}>
                     <p className={styles.AboutP}>
-                      荷物を持ち込む場合は車両内の荷物置き場や特大荷物スペース付き座席を利用する
+                      If you do bring luggage on board, use the luggage storage areas in the car or seats with an oversized-baggage space.
                     </p>
                   </div>
                 </div>

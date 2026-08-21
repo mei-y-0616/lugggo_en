@@ -131,23 +131,23 @@ export default function ClientTop() {
                 className={styles.SectionMainvisualButton}
               >
                 <span className={styles.SectionButtonText}>
-                  AI手ぶら観光プランナー
+                  AI Hands-Free Travel Planner
                 </span>
                 <span className={styles.SectionMainvisuaButtonArrow}>→</span>
               </Link>
               <Link href="/counters" className={styles.SectionMainvisualButton}>
                 <span className={styles.SectionButtonText}>
-                  手ぶら観光カウンターを探す
+                  Find a Hands-Free Travel Counter
                 </span>
                 <span className={styles.SectionMainvisuaButtonArrow}>→</span>
               </Link>
             </div>
             <div className={styles.SectionMainvisualText}>
               <h2 className={styles.SectionMainvisualTitleEN}>
+                Learn About{" "}
                 <span className={styles.SectionMainvisualTextSpan}>
-                  手ぶら観光
-                </span>{" "}
-                について知る
+                  Hands-Free Travel
+                </span>
               </h2>
             </div>
             <div className={styles.MainvisualScroll}>
@@ -225,13 +225,14 @@ export default function ClientTop() {
           <div className={styles.SectionText}>
             <h2 className={styles.SectionTitleEN}>About</h2>
             <h1 className={styles.SectionTitle}>
-              <span className={styles.TextHighlight}>手ぶら観光</span>とは？
+              What Is{" "}
+              <span className={styles.TextHighlight}>Hands-Free Travel</span>?
             </h1>
             <p className={styles.SectionP}>
-              「手ぶら観光」とは、重い荷物を空港・駅などに預けたり、ホテルや自宅へ配送したりすることで、身軽に旅を楽しむスタイルのことです。
+              "Hands-Free Travel" is a way of enjoying your trip unburdened — by leaving heavy luggage at airports, stations, and other locations, or having it delivered to your hotel or home. 
               <br />
               <br />
-              国土交通省も推進しており、手ぶら観光には旅行者側とっても観光地側にとってもうれしい観光のスタイルなんです。
+              Promoted by Japan's Ministry of Land, Infrastructure, Transport and Tourism, it is a style of travel that benefits both travelers and tourist destinations alike.
             </p>
           </div>
           <div className={styles.AboutTopImg}>
@@ -257,8 +258,8 @@ export default function ClientTop() {
           <div className={styles.AboutFlex}>
             <div className={styles.AboutContents}>
               <p className={styles.AboutSubTitle}>
-                <span className={styles.TextHighlightAbout}>旅行者</span>{" "}
-                のうれしいポイント
+                Benefits for{" "}
+                <span className={styles.TextHighlightAbout}>Travelers</span>                
               </p>
               <div className={styles.AboutFlexSub}>
                 <Image
@@ -269,7 +270,7 @@ export default function ClientTop() {
                   alt=""
                 />
                 <p className={styles.SectionP}>
-                  重い荷物から解放されらくらく観光
+                  Sightsee with ease, free from heavy luggage <br/>
                 </p>
               </div>
               <div className={styles.AboutFlexSub}>
@@ -280,7 +281,7 @@ export default function ClientTop() {
                   src="/images/icon_check_green.svg"
                   alt=""
                 />
-                <p className={styles.SectionP}>どこへでも自由に移動</p>
+                <p className={styles.SectionP}>Move around freely, anywhere</p>
               </div>
               <div className={styles.AboutFlexSub}>
                 <Image
@@ -290,14 +291,14 @@ export default function ClientTop() {
                   src="/images/icon_check_green.svg"
                   alt=""
                 />
-                <p className={styles.SectionP}>もっと買い物しやすく</p>
+                <p className={styles.SectionP}>Shop more easily</p>
               </div>
             </div>
 
             <div className={styles.AboutContents}>
               <p className={styles.AboutSubTitle}>
-                <span className={styles.TextHighlightAbout}>観光地</span>{" "}
-                のうれしいポイント
+                Benefits for{" "}
+                <span className={styles.TextHighlightAbout}>Destinations</span>{" "}
               </p>
               <div className={styles.AboutFlexSub}>
                 <Image
@@ -308,12 +309,12 @@ export default function ClientTop() {
                   alt=""
                 />
                 <p className={styles.SectionP}>
-                  観光地や公共交通機関の荷物による混雑が緩和
+                  Less luggage-related congestion at tourist spots and on public transportation
                 </p>
               </div>
             </div>
             <div className={styles.SectionButtonWrap_About}>
-              <LinkButton path="/about" msg="手ぶら観光についてもっと知る" />
+              <LinkButton path="/about" msg="Learn More About Hands-Free Travel" />
             </div>
           </div>
         </div>
@@ -341,14 +342,13 @@ export default function ClientTop() {
             <div className={styles.SectionTextCounter}>
               <h2 className={styles.SectionTitleEN}>Counter</h2>
               <h1 className={styles.SectionTitle}>
+                What Is a{" "}
                 <span className={styles.TextHighlight}>
-                  手ぶら観光カウンター
-                </span>
-                とは？
+                  Hands-Free Travel Counter
+                </span>?
               </h1>
               <p className={styles.SectionP}>
-                「手ぶら観光カウンター」とは、スーツケースやお土産を預けたり、配送できるカウンターで、
-                いくつかの基準をクリアし国土交通省の認定を受けた場所をいいます。
+                A "Hands-Free Travel Counter" is a service point where you can store or ship suitcases and souvenirs — a location that has met certain criteria and been certified by Japan's Ministry of Land, Infrastructure, Transport and Tourism.
               </p>
             </div>
           </div>
@@ -372,10 +372,10 @@ export default function ClientTop() {
                   />
                 </div>
                 <h3 className={styles.CounterTitle}>
-                  カウンターで荷物を預ける
+                  Drop Off Your Luggage at the Counter
                 </h3>
                 <p className={styles.SectionP}>
-                  駅や空港にあるカウンターへ。重いスーツケースや増えたお土産をその場で預けます。
+                  Head to a counter at a station or airport, and drop off your heavy suitcase or growing pile of souvenirs on the spot.
                 </p>
               </div>
             </div>
@@ -397,9 +397,9 @@ export default function ClientTop() {
                     alt=""
                   />
                 </div>
-                <h3 className={styles.CounterTitle}>手ぶらで自由に観光</h3>
+                <h3 className={styles.CounterTitle}>Sightsee Freely, Hands-Free</h3>
                 <p className={styles.SectionP}>
-                  身軽になったら、そのまま観光地へ出発！人混みや階段、公共交通機関の移動もストレスフリーに楽しめます。
+                  Once you are traveling light, head straight out to see the sights! Crowds, stairs, and getting around by public transportation all become stress-free.
                 </p>
               </div>
             </div>
@@ -421,16 +421,16 @@ export default function ClientTop() {
                   />
                 </div>
                 <h3 className={styles.CounterTitle}>
-                  カウンター or 配送先で受け取り
+                  Pick Up at the Counter or Delivery Destination
                 </h3>
                 <p className={styles.SectionP}>
-                  観光を楽しんだ後は、元のカウンターで引き取るか、宿泊先や配送先で荷物を受け取ります。
+                  After enjoying your sightseeing, collect your luggage at the original counter, or receive it at your accommodation or delivery destination.
                 </p>
               </div>
             </div>
           </div>
           <div className={styles.SectionButtonWrap_Counter}>
-            <LinkButton path="/guide" msg="利用方法についてもっと知る" />
+            <LinkButton path="/guide" msg="Learn More About How to Use It" />
           </div>
           <div className={styles.CounterTreeLeft}>
             <Image src="/images/bg_top_tree.svg" fill alt="" />
@@ -443,27 +443,27 @@ export default function ClientTop() {
           <div className={styles.SectionTextService}>
             <h2 className={styles.SectionTitleEN}>Service</h2>
             <h1 className={styles.SectionTitle}>
+              About the{" "}
               <span className={styles.TextHighlight}>
-                AI手ぶら観光プランナー
+                AI Hands-Free Travel Planner
               </span>
-              について
             </h1>
             <p className={styles.SectionP}>
-              あなたの旅行のスケジュールを入力すると、AIがあなたのためのカウンター利用計画を提案してくれます。
+              Enter your travel schedule, and the AI will suggest a personalized plan for using the counters.
             </p>
             <div className={styles.SectionButtonWrap_Service}>
-              <LinkButton path="/ai-planner" msg="AI手ぶら観光プランナー" />
+              <LinkButton path="/ai-planner" msg="AI Hands-Free Travel Planner" />
             </div>
           </div>
           <div className={styles.ServiceContents}>
             <div className={styles.ServiceCardRight}>
               <p className={styles.ServiceCardNumber}>STEP 1</p>
               <p className={styles.ServiceCardTitle}>
-                旅のスケジュールを入力！
+                Enter Your Travel Schedule!
               </p>
               <hr className={styles.ServiceDivider} />
               <p className={styles.ServiceCardP}>
-                日程、出発地や目的地など、旅行のスケジュールをざっくり入力します。
+                Roughly enter your travel schedule, such as dates, departure point, and destination.
               </p>
             </div>
 
@@ -472,11 +472,11 @@ export default function ClientTop() {
             <div className={styles.ServiceCardLeft}>
               <p className={styles.ServiceCardNumber}>STEP 2</p>
               <p className={styles.ServiceCardTitle}>
-                AIが最適な利用計画を提案！
+                AI Suggests the Best Plan!
               </p>
               <hr className={styles.ServiceDivider} />
               <p className={styles.ServiceCardP}>
-                AIが最適な手ぶら観光カウンターの利用計画を自動で作成。どのカウンターで、いつ、預けるか配送するか、最適なプランをあなたの代わりに考えてくれます。
+                The AI automatically creates the best plan for using Hands-Free Travel Counters. It works out the ideal plan on your behalf — which counter to use, when, and whether to store or ship your luggage.
               </p>
             </div>
 
@@ -485,11 +485,11 @@ export default function ClientTop() {
             <div className={styles.ServiceCardRight}>
               <p className={styles.ServiceCardNumber}>STEP 3</p>
               <p className={styles.ServiceCardTitle}>
-                カウンター詳細までスムーズに！
+                Smooth Access to Counter Details!
               </p>
               <hr className={styles.ServiceDivider} />
               <p className={styles.ServiceCardP}>
-                提案された利用プランに関連するカウンターをマップとリスト形式でわかりやすく表示。気になるカウンターはそのまま詳細ページへスムーズにアクセスできます。
+                The counters related to your suggested plan are shown clearly on a map and in list form. For any counter that catches your eye, you can jump straight to its details page.
               </p>
             </div>
           </div>

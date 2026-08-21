@@ -38,7 +38,7 @@ export default function ClientAiPlanner() {
     e.preventDefault();
 
     if (prompt === "") {
-      setErrorMsg("旅程を入力してください。");
+      setErrorMsg("Please enter your travel schedule.");
       return;
     } else {
       setErrorMsg(null);
@@ -92,7 +92,7 @@ export default function ClientAiPlanner() {
       <div className="container">
         <section className={isThinking ? styles.isThinking : ""}>
           <div className={styles.intro}>
-            <h3>What is AI Hands-Free Travel Planner?</h3>
+            <h3>What is the AI Hands-Free Travel Planner?</h3>
             <p>
               Enter your travel schedule, including when and where you will be
               going, and the AI will suggest the most suitable plan for using

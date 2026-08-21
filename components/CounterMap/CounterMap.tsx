@@ -60,10 +60,10 @@ const CounterMap = memo(function CounterMap({
                 <InfoWindow
                   anchor={marker}
                   position={location}
-                  headerContent={<p className={styles.counterName}>{poi.counter_name_ja}</p>}
+                  headerContent={<p className={styles.counterName}>{poi.counter_name_en}</p>}
                   onClose={handleClose}
                 >
-                  {link&&<LinkButton path={`/counters/${poi.id}`} msg="カウンターの詳細へ"/>}
+                  {link&&<LinkButton path={`/counters/${poi.id}`} msg="View Counter Details"/>}
                 </InfoWindow>
               )}
             </AdvancedMarker>

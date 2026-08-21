@@ -9,7 +9,7 @@ const pathAltName: Record<string, string> = {
   counters: "Search Counters",
   contact: "Contact",
   "ai-planner": "AI Planner",
-  "terms":"Term of Service",
+  "terms":"Terms of Service",
   "privacy":"Privacy Policy",
 };
 

@@ -40,7 +40,7 @@ export default function Guide() {
 
           <div className={styles.HowInner}>
             <section id="HowToUse">
-              <SectTitle titleEn="How to Use" titleJa={<span>利用手順</span>} />
+              <SectTitle titleEn="How to Use" titleJa={<span>How It Works</span>} />
 
               <div className={styles.HowCard}>
                 <div className={styles.bag}>
@@ -64,27 +64,27 @@ export default function Guide() {
 
                 <div className={styles.HowRight}>
                   <h3 className={styles.HowCardTitle}>
-                    手ぶら観光カウンターを探す
+                    Find a Hands-Free Travel Counter
                   </h3>
                   <p className={styles.HowCardP}>
-                    営業時間や対応サービスはカウンターごとに異なるので、事前に調べることをおすすめします。
+                    Business hours and available services vary from counter to counter, so we recommend checking in advance.
                   </p>
 
                   <div className={styles.linkButtonWrapper}>
                     <LinkButton
                       path="/counters"
-                      msg="手ぶら観光カウンターを探す"
+                      msg="Find a Hands-Free Travel Counter"
                     />
                   </div>
 
                   <p className={styles.HowCardP}>
-                    また、以下のページではあなたの旅程にぴったりの手ぶら観光カウンターをAIが教えてくれます。
+                    On the page below, AI can also suggest the Hands-Free Travel Counter that best fits your itinerary.
                   </p>
 
                   <div className={styles.linkButtonWrapper}>
                     <LinkButton
                       path="/ai-planner"
-                      msg="AI手ぶら観光プランナーへ"
+                      msg="AI Hands-Free Travel Planner"
                     />
                   </div>
                 </div>
@@ -109,14 +109,14 @@ export default function Guide() {
 
                 <div className={styles.HowRight}>
                   <h3 className={styles.HowCardTitle}>
-                    カウンターに荷物を持っていき、申し込む
+                    Bring Your Luggage to the Counter and Apply
                   </h3>
                   <p className={styles.HowCardP}>
-                    カウンターで必要事項を記入して料金を支払い、荷物を引き渡します。
-                    手ぶら観光カウンターに認定されているカウンターは全て英語での対応が可能であるため、海外からの観光客の方々でも安心して利用できます。
+                    Fill in the required information at the counter, pay the fee, and hand over your luggage. 
+                    All certified Hands-Free Travel Counters can provide service in English, so visitors from overseas can use them with peace of mind.
                   </p>
                   <p className={styles.HowCardNote}>
-                    ※事前に申し込みが必要なカウンターもあります。
+                    *Some counters require you to apply in advance.
                   </p>
                 </div>
               </div>
@@ -139,12 +139,11 @@ export default function Guide() {
                 <div className={styles.HowCardDivider}></div>
 
                 <div className={styles.HowRight}>
-                  <h3 className={styles.HowCardTitle}>手ぶらで観光を楽しむ</h3>
+                  <h3 className={styles.HowCardTitle}>Enjoy Sightseeing Hands-Free</h3>
                   <p className={styles.HowCardP}>
-                    駅の階段や坂道の多い観光地、人気スポットの人混みも、荷物が減るだけでより快適に移動できます。
-                    観光地での買い物もより楽しめます。
+                    With less luggage to carry, you can move around far more comfortably — whether on station stairs, in hilly sightseeing areas, or through the crowds at popular spots. You can also enjoy shopping more while you are out. 
                     <br />
-                    また、大きな荷物を持たずに観光することで観光地の混雑が緩和されるため、観光地側にも貢献できます。
+                    What's more, sightseeing without large luggage helps ease congestion at tourist destinations, so you contribute to the destinations as well.
                   </p>
                 </div>
               </div>
@@ -168,76 +167,72 @@ export default function Guide() {
 
                 <div className={styles.HowRight}>
                   <h3 className={styles.HowCardTitle}>
-                    カウンターに荷物を持っていき、申し込む
+                    Pick Up Your Luggage
                   </h3>
                   <p className={styles.HowCardP}>
-                    手ぶらで観光を楽しんだ後、預け先、または配送先で荷物を受け取ります。
+                    After enjoying your sightseeing hands-free, pick up your luggage at the storage location or the delivery destination.
                   </p>
                 </div>
               </div>
 
               <p className={styles.PriceAnnotation}>
-                ※上記の利用方法は一例です。カウンターにより詳細が異なる場合がありますので、ご利用前に公式サイト等でご確認ください。{" "}
+                *The steps above are just one example. Details may vary by counter, so please check the official website or similar sources before use.{" "}
               </p>
             </section>
 
             <section id="Price">
               <SectTitle
                 titleEn="Service & Price"
-                titleJa={<span>サービスの種類と参考料金</span>}
+                titleJa={<span>Service Types & Estimated Fees</span>}
               />
 
               <div className={styles.PriceGrid}>
                 <div className={styles.PriceCard}>
-                  <h3 className={styles.PriceCardTitle}>一時預かり</h3>
+                  <h3 className={styles.PriceCardTitle}>Storage</h3>
                   <p className={styles.PriceCardP}>
-                    荷物をカウンターに預け、同じ場所で受け取ります。
+                    Leave your luggage at the counter and pick it up at the same location.
                   </p>
                   <p className={styles.PriceCardPrice}>
-                    <span className={styles.PriceCardNote}>約</span> ¥500〜1,000{" "}
-                    <span className={styles.PriceCardNote}>(参考)</span>
+                    <span className={styles.PriceCardNote}>Approx.</span>{" "}¥500-1,000{" "}
                   </p>
                 </div>
 
                 <div className={styles.PriceCard}>
-                  <h3 className={styles.PriceCardTitle}>当日配送</h3>
+                  <h3 className={styles.PriceCardTitle}>Same-day Delivery</h3>
                   <p className={styles.PriceCardP}>
-                    預けた荷物を当日中にホテルや空港などで受け取ります。
+                    Receive your stored luggage the same day at a hotel, airport, or similar location.
                   </p>
                   <p className={styles.PriceCardPrice}>
-                    <span className={styles.PriceCardNote}>約</span>{" "}
-                    ¥2,000〜3,000{" "}
-                    <span className={styles.PriceCardNote}>(参考)</span>
+                    <span className={styles.PriceCardNote}>Approx.</span>{" "}
+                    ¥2,000-3,000{" "}
                   </p>
                 </div>
 
                 <div className={styles.PriceCard}>
-                  <h3 className={styles.PriceCardTitle}>一般配送</h3>
+                  <h3 className={styles.PriceCardTitle}>Standard Delivery</h3>
                   <p className={styles.PriceCardP}>
-                    預けた荷物を翌日以降に自宅や次の宿泊先などで受け取ります。
+                    Receive your stored luggage the next day or later at your home, next accommodation, or similar location.
                   </p>
                   <p className={styles.PriceCardPrice}>
-                    <span className={styles.PriceCardNote}>約</span>{" "}
-                    ¥2,000〜5,000{" "}
-                    <span className={styles.PriceCardNote}>(参考)</span>
+                    <span className={styles.PriceCardNote}>Approx.</span>{" "}
+                    ¥2,000-5,000{" "}
                   </p>
                 </div>
 
                 <div className={styles.PriceCard}>
-                  <h3 className={styles.PriceCardTitle}>海外配送</h3>
+                  <h3 className={styles.PriceCardTitle}>Overseas Delivery</h3>
                   <p className={styles.PriceCardP}>
-                    預けた荷物を海外の自宅へ直接送ります。
+                    Send your stored luggage directly to your home overseas.
                   </p>
                   <p className={styles.PriceCardPrice}>
-                    <span className={styles.PriceCardNote}>約</span>{" "}
-                    ¥1,400〜40,000{" "}
-                    <span className={styles.PriceCardNote}>(参考)</span>
+                    <span className={styles.PriceCardNote}>Approx.</span>{" "}
+                    ¥1,400-40,000{" "}
                   </p>
                 </div>
               </div>
 
               <p className={styles.PriceAnnotation}>
-                ※上記の料金は目安です。利用カウンターや荷物の大きさ、配送距離などによって変動します。
+                *The fees above are estimates. They vary depending on the counter, luggage size, delivery distance, and other factors.
               </p>
             </section>
           </div>

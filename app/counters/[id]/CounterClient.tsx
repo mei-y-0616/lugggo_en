@@ -32,7 +32,7 @@ export default function CounterClient({
     } else {
       return (
         <>
-          <span className={styles.price}>{min ?? "---"}</span>～
+          <span className={styles.price}>{min ?? "---"}</span>-
           <span className={styles.price}>{max ?? "---"}</span>
         </>
       );
@@ -81,13 +81,13 @@ export default function CounterClient({
                   <div className={styles.counterDetailRight}>
                     <DetailItem
                       imageSrc="/images/icon_lang_gray.svg"
-                      explain={<p>Language：{getLanguage(counter)}</p>}
+                      explain={<p>Language: {getLanguage(counter)}</p>}
                     />
                     {c.station_name_en && (
                       <DetailItem
                         imageSrc="/images/icon_station_gray.svg"
                         explain={
-                          <p>Location & Nearest Public Transportation：{c.station_name_en}</p>
+                          <p>Location & Nearest Public Transportation: {c.station_name_en}</p>
                         }
                       />
                     )}
@@ -96,7 +96,7 @@ export default function CounterClient({
                         imageSrc="/images/icon_url_gray.svg"
                         explain={
                           <p style={{ wordBreak: "break-all" }}>
-                            Official Website：
+                            Official Website: 
                             {/* <Link
                               href={c.website_url}
                               className="break-all"
@@ -147,7 +147,7 @@ export default function CounterClient({
                             <td>
                               <div className={styles.serviceItem}>
                                 {c.storage_item_suitcase === "1" && (
-                                  <span>SuitCases</span>
+                                  <span>Suitcases</span>
                                 )}
                                 {c.storage_item_chilled === "1" && (
                                   <span>Refrigerated</span>
@@ -162,16 +162,16 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.storage_max_dimensions && (
                                     <p>
-                                      Max Total Dimensions：
+                                      Max Total Dimensions: 
                                       {c.storage_max_dimensions}cm
                                     </p>
                                   )}
                                   {c.storage_max_weight && (
-                                    <p>Max Weight：{c.storage_max_weight}kg</p>
+                                    <p>Max Weight: {c.storage_max_weight}kg</p>
                                   )}
                                   {c.storage_max_value && (
                                     <p>
-                                      Max Declared Value：￥{c.storage_max_value}
+                                      Max Declared Value: ￥{c.storage_max_value}
                                     </p>
                                   )}
                                 </div>
@@ -190,7 +190,7 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.storage_insurance_limit && (
                                     <p>
-                                      Amount of Compensation：Up to ￥{c.storage_insurance_limit}
+                                      Amount of Compensation: Up to ￥{c.storage_insurance_limit}
                                     </p>
                                   )}
                                 </div>
@@ -229,7 +229,7 @@ export default function CounterClient({
                             <td>
                               <div className={styles.serviceItem}>
                                 {c.delivery_sameday_item_suitcase === "1" && (
-                                  <span>SuitCases</span>
+                                  <span>Suitcases</span>
                                 )}
                                 {c.delivery_sameday_item_chilled === "1" && (
                                   <span>Refrigerated</span>
@@ -244,19 +244,19 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_sameday_max_dimensions && (
                                     <p>
-                                      Max Total Dimensions：
+                                      Max Total Dimensions: 
                                       {c.delivery_sameday_max_dimensions}cm
                                     </p>
                                   )}
                                   {c.delivery_sameday_max_weight && (
                                     <p>
-                                      Max Weight：{c.delivery_sameday_max_weight}
+                                      Max Weight: {c.delivery_sameday_max_weight}
                                       kg
                                     </p>
                                   )}
                                   {c.delivery_sameday_max_value && (
                                     <p>
-                                      Max Declared Value：
+                                      Max Declared Value: 
                                       ￥{c.delivery_sameday_max_value}
                                     </p>
                                   )}
@@ -276,7 +276,7 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_sameday_insurance_limit && (
                                     <p>
-                                      Amount of Compensation：
+                                      Amount of Compensation: 
                                       Up to ￥{c.delivery_sameday_insurance_limit}
                                     </p>
                                   )}
@@ -297,7 +297,7 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_sameday_cutoff_time && (
                                     <p>
-                                      Last Acceptance Time：
+                                      Last Acceptance Time: 
                                       {parseTime(
                                         c.delivery_sameday_cutoff_time,
                                       )}
@@ -305,7 +305,7 @@ export default function CounterClient({
                                   )}
                                   {c.delivery_sameday_last_time && (
                                     <p>
-                                      Latest Delivery Time：
+                                      Latest Delivery Time: 
                                       {parseTime(c.delivery_sameday_last_time)}
                                     </p>
                                   )}
@@ -351,7 +351,7 @@ export default function CounterClient({
                             <td>
                               <div className={styles.serviceItem}>
                                 {c.delivery_standard_item_suitcase === "1" && (
-                                  <span>SuitCases</span>
+                                  <span>Suitcases</span>
                                 )}
                                 {c.delivery_standard_item_chilled === "1" && (
                                   <span>Refrigerated</span>
@@ -366,19 +366,19 @@ export default function CounterClient({
                                 <div className={styles.serviceDetail}>
                                   {c.delivery_standard_max_dimensions && (
                                     <p>
-                                      Max Total Dimensions：
+                                      Max Total Dimensions: 
                                       {c.delivery_standard_max_dimensions}cm
                                     </p>
                                   )}
                                   {c.delivery_standard_max_weight && (
                                     <p>
-                                      Max Weight：{c.delivery_standard_max_weight}
+                                      Max Weight: {c.delivery_standard_max_weight}
                                       kg
                                     </p>
                                   )}
                                   {c.delivery_standard_max_value && (
                                     <p>
-                                      Max Declared Value：
+                                      Max Declared Value: 
                                       ￥{c.delivery_standard_max_value}
                                     </p>
                                   )}
@@ -396,9 +396,9 @@ export default function CounterClient({
                             <td>
                               {c.delivery_standard_insurance_limit && (
                                 <div className={styles.serviceDetail}>
-                                  {c.delivery_sameday_insurance_limit && (
+                                  {c.delivery_standard_insurance_limit && (
                                     <p>
-                                      Amount of Compensation：
+                                      Amount of Compensation: 
                                       Up to ￥{c.delivery_standard_insurance_limit}
                                     </p>
                                   )}
@@ -463,7 +463,7 @@ export default function CounterClient({
                             <td>
                               <div className={styles.serviceItem}>
                                 {c.delivery_overseas_item_suitcase === "1" && (
-                                  <span>SuitCases</span>
+                                  <span>Suitcases</span>
                                 )}
                                 {c.delivery_overseas_item_chilled === "1" && (
                                   <span>Refrigerated</span>
@@ -475,18 +475,18 @@ export default function CounterClient({
                               <div className={styles.serviceDetail}>
                                 {c.delivery_overseas_max_dimensions && (
                                   <p>
-                                    Max Total Dimensions：
+                                    Max Total Dimensions: 
                                     {c.delivery_overseas_max_dimensions}cm
                                   </p>
                                 )}
                                 {c.delivery_overseas_max_weight && (
                                   <p>
-                                    Max Weight：{c.delivery_overseas_max_weight}kg
+                                    Max Weight: {c.delivery_overseas_max_weight}kg
                                   </p>
                                 )}
                                 {c.delivery_overseas_max_value && (
                                   <p>
-                                    Max Declared Value：
+                                    Max Declared Value: 
                                     ￥{c.delivery_overseas_max_value}
                                   </p>
                                 )}
@@ -502,9 +502,9 @@ export default function CounterClient({
                             <th>Compensation</th>
                             <td>
                               <div className={styles.serviceDetail}>
-                                {c.delivery_sameday_insurance_limit && (
+                                {c.delivery_overseas_insurance_limit && (
                                   <p>
-                                    Amount of Compensation：
+                                    Amount of Compensation: 
                                     Up to ￥{c.delivery_overseas_insurance_limit}
                                   </p>
                                 )}

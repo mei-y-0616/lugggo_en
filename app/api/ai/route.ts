@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: false,
       message: "AI API request failed",
-      res: "An error occurrd. Please try again." + e,
+      res: "An error occurred. Please try again." + e,
     });
   }
 }

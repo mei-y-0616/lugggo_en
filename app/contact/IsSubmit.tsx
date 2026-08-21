@@ -6,7 +6,7 @@ import LinkButton from "@/components/LinkButton/LinkButton";
 export default function IsSubmit() {
   return (
     <>
-      <PageTitle titleEn="Contact" titleJa="Contact" />;
+      <PageTitle titleEn="Contact" titleJa="Contact" />
       <div className="container">
         <section className={styles.submit}>
           <div className={styles.head}>

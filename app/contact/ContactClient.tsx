@@ -139,7 +139,7 @@ function Form({ setIsSubmit }: { setIsSubmit: (isSubmit: boolean) => void }) {
               placeholder="Please enter your inquiry here."
               id="content"
               {...register("content", {
-                required: "Inquiry Details is Required.",
+                required: "Inquiry details are required.",
               })}
             ></textarea>
             {errors.content && (
@@ -155,7 +155,7 @@ function Form({ setIsSubmit }: { setIsSubmit: (isSubmit: boolean) => void }) {
             </p>
             <br />
 
-            <p>【Important Notes Before Submitting an Inquiry】</p>
+            <p>[Important Notes Before Submitting an Inquiry]</p>
             <ul>
               <li>
                 Clicking the “Submit” button will send your inquiry directly to
@@ -223,53 +223,53 @@ export default function ContactClient() {
       <PageTitle titleEn="Contact" titleJa="Contact" />
       <div className="container">
         <section id="faq">
-          <SectTitle titleEn="Q ＆ A" titleJa={<span>よくある質問</span>} />
+          <SectTitle titleEn="Q & A" titleJa={<span>Frequently Asked Questions</span>} />
           <dl className={styles.faqList}>
             <FAQ
-              q="預けることができない荷物はありますか？"
+              q="Are there any items that cannot be stored?"
               a={
                 <>
                   <p>
-                    はい、以下の荷物は預けたり配送することができないのでご注意ください。
+                    Yes. Please note that the following items cannot be stored or shipped.
                   </p>
                   <ul>
-                    <li>貴重品</li>
-                    <li>壊れやすい物</li>
-                    <li>生鮮食品、液体類</li>
-                    <li>危険物、有害物質</li>
+                    <li>Valuables</li>
+                    <li>Fragile items</li>
+                    <li>Perishable foods and liquids</li>
+                    <li>Hazardous or harmful materials</li>
                   </ul>
                   <p>
-                    その他、スーツケースやクール品などの対応状況は各カウンターにより異なります。
+                    In addition, whether items such as suitcases or refrigerated goods can be handled varies from counter to counter.
                   </p>
                 </>
               }
             />
             <FAQ
-              q="どのような支払い方法がありますか？"
+              q="What payment methods are available?"
               a={
                 <>
                   <p>
-                    各カウンターにより異なります。現金のみの場所もあれば、クレジットカード、電子マネー、QRコード決済をご利用できる場所もあります。詳細については、各カウンターの公式ページをご確認いただくか、各カウンターに直接お問い合わせください。
+                    This varies from counter to counter. Some locations accept cash only, while others accept credit cards, electronic money, and QR code payments. For details, please check each counter's official page or contact the counter directly.
                   </p>
                 </>
               }
             />
             <FAQ
-              q="事前の予約は必要ですか？"
+              q="Do I need to make a reservation in advance?"
               a={
                 <>
                   <p>
-                    多くのカウンターは予約なしで当日そのままご利用いただけます。ただし、一部のカウンターや団体でのご利用などは事前予約が必要な場合もございます。事前に各カウンターのWebサイトをご確認いただくことをおすすめします。
+                    Most counters can be used on the day without a reservation. However, some counters, or group use, may require a reservation in advance. We recommend checking each counter's website beforehand.
                   </p>
                 </>
               }
             />
             <FAQ
-              q="他の信頼できる公式の情報源はありますか？"
+              q="Are there other reliable, official sources of information?"
               a={
                 <>
                   <p>
-                    以下の国の機関の公式サイトにて、手ぶら観光や手ぶら観光カウンターの情報をご覧いただけます。
+                    You can find information about hands-free travel and Hands-Free Travel Counters on the official sites of the following government bodies.
                   </p>
                   <ul>
                     <li>
@@ -278,9 +278,9 @@ export default function ContactClient() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        国土交通省
+                        Ministry of Land, Infrastructure, Transport and Tourism (MLIT)
                       </Link>
-                      ：全国の手ぶら観光カウンターがリスト形式（CSV/PDF）で掲載されています。
+                      : A nationwide list of Hands-Free Travel Counters is available in list form (CSV/PDF).
                     </li>
 
                     <li>
@@ -289,9 +289,9 @@ export default function ContactClient() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        日本政府観光局 (JNTO)
+                        Japan National Tourism Organization (JNTO)
                       </Link>
-                      ：訪日外国人向けに、多言語で手ぶら観光カウンターの利用方法について掲載しています。
+                      ：Provides information in multiple languages on how to use Hands-Free Travel Counters, aimed at visitors to Japan.
                     </li>
                   </ul>
                 </>
@@ -303,12 +303,12 @@ export default function ContactClient() {
         <section id="contact">
           <SectTitle
             titleEn="Contact"
-            titleJa={<span>お問い合わせフォーム</span>}
+            titleJa={<span>Contact Form</span>}
           />
           <p className={styles.sectExplain}>
-            本ページ、サービスについてのご意見・ご感想・ご質問は以下のフォームで受け付けております。
+            We welcome your opinions, feedback, and questions about this page or our service via the form below. 
             <br />
-            お気軽にお問い合わせください。
+            Please feel free to get in touch.
           </p>
           <Form setIsSubmit={setIsSubmit} />
         </section>

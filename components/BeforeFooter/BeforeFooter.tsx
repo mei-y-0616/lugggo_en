@@ -30,7 +30,7 @@ export default function BeforeFooter() {
                 <div className={styles.bigLinkFlex}>
                   <p>
                     Use the AI Hands-Free Travel Planner to find the best
-                    Hands-Free Travel counter for your trip.
+                    Hands-Free Travel Counter for your trip.
                   </p>
                   <Link href="/ai-planner" className={styles.link}>
                     →

@@ -9,7 +9,7 @@ export default function NotFound() {
     <div className="container">
       <div className={styles.notFound}>
         <p>Sorry...</p>
-        <h2 className={styles.notFoundText}>このページは見つかりませんでした。</h2>
+        <h2 className={styles.notFoundText}>This page could not be found.</h2>
       </div>
     </div>
   );

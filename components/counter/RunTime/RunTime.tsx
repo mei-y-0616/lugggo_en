@@ -7,7 +7,7 @@ export default function RunTime({ c }: { c: counter }) {
     <dl className={styles.counterRunTime}>
       <div>
         <div className={styles.counterRunTimeItem}>
-          <dt>Mon：</dt>
+          <dt>Mon: </dt>
           <dd>
             {judgeRunTime({
               open: c.mon_open,
@@ -18,7 +18,7 @@ export default function RunTime({ c }: { c: counter }) {
         </div>
 
         <div className={styles.counterRunTimeItem}>
-          <dt>Tue：</dt>
+          <dt>Tue: </dt>
           <dd>
             {judgeRunTime({
               open: c.tue_open,
@@ -29,7 +29,7 @@ export default function RunTime({ c }: { c: counter }) {
         </div>
 
         <div className={styles.counterRunTimeItem}>
-          <dt>Wed：</dt>
+          <dt>Wed: </dt>
           <dd>
             {judgeRunTime({
               open: c.wed_open,
@@ -40,7 +40,7 @@ export default function RunTime({ c }: { c: counter }) {
         </div>
 
         <div className={styles.counterRunTimeItem}>
-          <dt>Thu：</dt>
+          <dt>Thu: </dt>
           <dd>
             {judgeRunTime({
               open: c.thu_open,
@@ -53,7 +53,7 @@ export default function RunTime({ c }: { c: counter }) {
 
       <div>
         <div className={styles.counterRunTimeItem}>
-          <dt>Fri：</dt>
+          <dt>Fri: </dt>
           <dd>
             {judgeRunTime({
               open: c.fri_open,
@@ -64,7 +64,7 @@ export default function RunTime({ c }: { c: counter }) {
         </div>
 
         <div className={styles.counterRunTimeItem}>
-          <dt>Sat：</dt>
+          <dt>Sat: </dt>
           <dd>
             {judgeRunTime({
               open: c.sat_open,
@@ -75,7 +75,7 @@ export default function RunTime({ c }: { c: counter }) {
         </div>
 
         <div className={styles.counterRunTimeItem}>
-          <dt>Sun：</dt>
+          <dt>Sun: </dt>
           <dd>
             {judgeRunTime({
               open: c.sun_open,

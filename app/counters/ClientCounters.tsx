@@ -326,7 +326,7 @@ function SearchResult({
           Search Results for
           {searchAry.map((word, index) => (
             <span key={index}>
-              {index !== 0 && "、"}
+              {index !== 0 && ", "}
               {word}
             </span>
           ))}
@@ -336,7 +336,7 @@ function SearchResult({
         <>
           <span>Showing </span>
           <span className={styles.searchResultStrong}>
-            {start + Math.min(1, count)}～{Math.min(start + limit, count)} 
+            {start + Math.min(1, count)}-{Math.min(start + limit, count)} 
           </span>
           <span> of </span>
         </>
